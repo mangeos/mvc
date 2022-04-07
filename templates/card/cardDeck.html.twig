@@ -1,0 +1,50 @@
+{% extends "base.html.twig" %}
+{% block title %}
+Card
+
+{% endblock %}
+
+{% block Rtitle %}
+Card
+
+{% endblock %}
+
+
+{% block content %}
+
+	<section>
+		<nav>
+			<ul>
+				<li>
+					<a href="./../../">Presentation</a>
+				</li>
+				<li>
+					<a href="./../../about">About</a>
+				</li>
+				<li>
+					<a href="./../../report">Report</a>
+				</li>
+				<li>
+					<a href="./../../card">Card</a>
+				</li>
+				<hr>
+			</ul>
+		</nav>
+
+		<article>
+				<h1>{{ title }}</h1>
+			<div class="container">
+				{% for item in test %}
+<div class="card">
+	{{item.rank}}-{{item.suit}}-{{item.value}}
+</div>
+
+				{% endfor %}
+
+			</div>
+				
+
+		</article>
+	</section>
+{% endblock %}
+

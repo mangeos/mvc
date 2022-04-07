@@ -1,0 +1,56 @@
+{% extends "base.html.twig" %}
+{% block title %}
+	Report
+{% endblock %}
+
+{% block Rtitle %}
+{{title}}
+
+{% endblock %}
+
+
+{% block content %}
+
+<section>
+	<nav>
+		<ul>
+			<li><a href="./">Presentation</a></li>
+			<li><a href="./about">About</a></li>
+			<li><a href="./report">report</a></li>
+			<li><a href="./card">report</a></li>
+		</ul>
+	</nav>
+
+	<article>
+<div class="container">
+
+	<h1> {{ title }}</h1>
+		<h2> Kmom01</h2>
+			<h3>Berätta kort om dina förkunskaper och tidigare erfarenheter kring objektorientering.</h3>
+				<p>Jag har gått kursen oopython och där fick man en god kunskap i vad objekorinterad programmering innebär.
+				Jag tror det inte är så stor skillnad mellan språken, grundpricipen är nog detsamma.</p>
+			<h3>Berätta kort om PHPs modell för klasser och objekt. Vilka är de grunder man behöver veta/förstå för att kunna komma igång och skapa sina första klasser?.</h3>
+				<p>Som guiden gick igenom så skapas ett objekt utifrån en klass som kan ses som en mall.
+				Ett objekt har medlemsvariabler och metoder.
+				När man har skapat ett objekt så kallas det för en instans av klassen.</p>
+
+			<h3>Reflektera kort över den kodbas, koden, strukturen som användes till uppgiften me/report, hur uppfattar du den?</h3>
+				<p>Min reflektion över strukturen är att den var väldigt logisk och enkel att förstå.
+				</p>
+			<h3>Med tanke på artikeln “PHP The Right Way”, vilka delar in den finner du extra intressanta och värdefulla? Är det några särskilda områden som du känner att du vill veta mer om? Lyft fram några delar av artikeln som du känner mer värdefulla.</h3>
+				<p>“PHP The Right Way” ser ut att ha en väldigt bra översikt på vad det innebär att programmera med php.
+				Jag har inte hunnit läsa så mycket av artikeln men Code style delen var ett intressant läsning.
+				Det förklaras i texten på vikten att man bör ha en gemmensam kod stil för att underlätta för andra utvecklare som kommer ta del av sin kod.</p>
+			<h3>Vilken är din TIL för detta kmom?</h3>
+				<p>Att få jobba med ramverket symfony var nytt för mig.
+				Det var en lagom stor uppgift där grunderna gicks igenom med artiklar som var väldigt intressanta.
+				Man arbetade med template engine twig som var ett trevligt verktyg att använda sig utav.
+				Jag ser framemot att få jobba mer med ramverket i kommande kmom.</p>
+
+    </article>
+</div>
+
+</section>
+
+{% endblock %}
+

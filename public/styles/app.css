@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+  margin: 0;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+  
+
+ 
+}
+
+/* Container for flexboxes */
+section {
+  display: -webkit-flex;
+  display: flex;
+  
+}
+
+/* Style the navigation menu */
+nav {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: #ccc;
+  padding: 20px;
+
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav a {
+  font-size: 25px;
+  color: #818181;
+}
+
+nav a:hover {
+  color: #f1f1f1;
+}
+
+/* Style the content */
+article {
+  -webkit-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+  background-color: #f1f1f1;
+  padding: 10px;
+  min-height: calc(100vh - 40px);
+
+}
+
+article .container {
+  max-width: 800px;
+  flex-wrap: wrap;
+  display: flex;
+  gap: 1rem;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  height: 200px;
+
+}
+
+footer .icons{
+  display: flex;
+  color: white;
+  padding-right: 20px;
+}
+
+.icon1:hover{
+  color: #666;
+}
+
+.icon2:hover{
+  color: #666;
+}
+
+.wrapperfoot {
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+}
+
+footer h2 {
+  border-bottom-style: inset;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+.card {
+  background-color:white;
+  border-color: #808080 #000000 #000000 #808080;
+  border-width: 1px;
+  border-style: solid;
+  color: #000000;
+  font-size: 20pt;
+  width: 3.75em;
+  height: 5.00em;
+
+  flex: 1 0 21%;
+  
+}

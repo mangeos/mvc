@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}{% endblock %}</title>
+        <link href= {{ asset('styles/app.css') }} rel="stylesheet"/>
+
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>"/>
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        <script defer src="https://friconix.com/cdn/friconix.js"></script>
+        
+    </head>
+    <body>
+<header>
+<h1>
+	{% block Rtitle %}{% endblock %}
+</h1>
+
+</header>
+
+        {% block content %}{% endblock %}
+
+<footer>
+
+    <h2>Kursen Mvc</h2>
+
+    <div class="wrapperfoot">
+    <div class="icons">
+
+<a style="color:white;" href="https://github.com/dbwebb-se/mvc/">
+
+	<i class="fi-xnsuxl-github fi-4x icon1">Github</i>
+</a>
+
+
+
+    </div>
+
+<div class="icons">
+
+
+<a style="color:white;" href="https://dbwebb.se/kurser/mvc">
+
+
+	<i class="fi-cnluxl-home-small fi-4x icon2"></i>
+</a>
+
+
+
+
+
+</div>
+
+</div>
+
+</footer>
+    </body>
+
+</html>
