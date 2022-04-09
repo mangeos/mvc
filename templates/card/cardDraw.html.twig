@@ -1,0 +1,59 @@
+{% extends "base.html.twig" %}
+{% block title %}
+	Presentation
+{% endblock %}
+
+{% block Rtitle %}
+	Presentation
+{% endblock %}
+
+
+{% block content %}
+
+	<section>
+<nav>
+	<ul>
+		<li>
+			<a href={{ asset('./') }}>Presentation</a>
+		</li>
+		<li>
+			<a href={{ asset('./about') }}>About</a>
+		</li>
+		<li>
+			<a href={{ asset('./report') }}>Report</a>
+		</li>
+		<li>
+			<a href={{ asset('./card') }}>Card</a>
+		</li>
+		<hr>
+	</ul>
+</nav>
+
+
+		<article>
+				<h1>{{ title }}</h1>
+				<h2>Cards undersidor</h2>
+			<div class="container">
+
+			<form  >
+  				<label for="number">Antal kort:</label><br>
+				<input name="number" type="number" id="number" min="0" max={{countCardsLeft}} value="1"><br><br>
+ 				<input type="submit" value="Submit">
+			</form>
+
+		</div>
+{{countCardsLeft}}
+
+{% for item in onecard %}
+	{% for i in item %}
+{{i.suit}}	
+		
+	{% endfor %}
+	
+{% endfor %}
+
+
+
+	</article>
+</section>{% endblock %}
+

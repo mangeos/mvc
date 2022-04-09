@@ -16,16 +16,16 @@ Cards undersidor
 		<nav>
 			<ul>
 				<li>
-					<a href="./../">Presentation</a>
+					<a href={{ asset('./') }}>Presentation</a>
 				</li>
 				<li>
-					<a href="./../about">About</a>
+					<a href={{ asset('./about') }}>About</a>
 				</li>
 				<li>
-					<a href="./../report">report</a>
+					<a href={{ asset('./report') }}>report</a>
 				</li>
 				<li>
-					<a href="./../card">Card</a>
+					<a href={{ asset('./card') }}>Card</a>
 				</li>
 				<hr>
 			</ul>
@@ -35,9 +35,9 @@ Cards undersidor
 				<h1>{{ title }}</h1>
 			<div class="container">
 				<ul>
-					<li><a href="./card/deck">card/deck</a></li>
-					<li><a href="./card/deck/shuffle">card/deck/shuffle</a></li>
-					<li><a href="./card/deck/draw">card/deck/draw</a></li>
+					<li><a href= {{ asset('./card/deck') }}>card/deck</a></li>
+					<li><a href={{ asset('./card/deck/shuffle') }}>card/deck/shuffle</a></li>
+					<li><a href= {{ asset('./card/deck/draw') }}>card/deck/draw</a></li>
 					<li><a href="./card/deck/draw/">Card</a></li>
 				</ul>
 			

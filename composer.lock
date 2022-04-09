@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "752c10431c8857a9548ed6028233226e",
+    "content-hash": "5ff29cb7e40759c043e770dad4e2ec40",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -492,16 +492,16 @@
         },
         {
             "name": "doctrine/doctrine-bundle",
-            "version": "2.6.1",
+            "version": "2.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineBundle.git",
-                "reference": "b7002752b555cb61cc9ca8d4c89a5b6e8200f765"
+                "reference": "53cf797feda995299629bed081ffb51776f36e9f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/b7002752b555cb61cc9ca8d4c89a5b6e8200f765",
-                "reference": "b7002752b555cb61cc9ca8d4c89a5b6e8200f765",
+                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/53cf797feda995299629bed081ffb51776f36e9f",
+                "reference": "53cf797feda995299629bed081ffb51776f36e9f",
                 "shasum": ""
             },
             "require": {
@@ -586,7 +586,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/DoctrineBundle/issues",
-                "source": "https://github.com/doctrine/DoctrineBundle/tree/2.6.1"
+                "source": "https://github.com/doctrine/DoctrineBundle/tree/2.6.2"
             },
             "funding": [
                 {
@@ -602,7 +602,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-04-02T16:17:41+00:00"
+            "time": "2022-04-07T09:18:26+00:00"
         },
         {
             "name": "doctrine/doctrine-migrations-bundle",
@@ -1841,16 +1841,16 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "1.4.2",
+            "version": "1.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "4cb3021a4e10ffe3d5f94a4c34cf4b3f6de2fa3d"
+                "reference": "34545bb30a6f8bd86cfa371dbd42140a657bbf0d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/4cb3021a4e10ffe3d5f94a4c34cf4b3f6de2fa3d",
-                "reference": "4cb3021a4e10ffe3d5f94a4c34cf4b3f6de2fa3d",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/34545bb30a6f8bd86cfa371dbd42140a657bbf0d",
+                "reference": "34545bb30a6f8bd86cfa371dbd42140a657bbf0d",
                 "shasum": ""
             },
             "require": {
@@ -1879,9 +1879,9 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.4.2"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.4.3"
             },
-            "time": "2022-03-30T13:33:37+00:00"
+            "time": "2022-04-08T11:30:34+00:00"
         },
         {
             "name": "psr/cache",
