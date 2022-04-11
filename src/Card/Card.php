@@ -20,4 +20,3 @@ public function __construct(string $suit, string $rank, int $value)
 }
     
 }
-

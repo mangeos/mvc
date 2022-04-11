@@ -32,25 +32,54 @@
 
 		<article>
 				<h1>{{ title }}</h1>
-				<h2>Cards undersidor</h2>
+				<h2>Antal kort kvar {{countCardsLeft}}</h2>
 			<div class="container">
-
-			<form  >
-  				<label for="number">Antal kort:</label><br>
-				<input name="number" type="number" id="number" min="0" max={{countCardsLeft}} value="1"><br><br>
- 				<input type="submit" value="Submit">
-			</form>
-
-		</div>
-{{countCardsLeft}}
-
+				<form action={{asset("./card/deck/draw") }}>
+					<label for="number">Antal kort:</label><br>
+					<input name="number" type="number" id="number" min="0" max={{countCardsLeft}} value="1"><br><br>
+					<input type="submit" value="Submit">
+				</form>
 {% for item in onecard %}
-	{% for i in item %}
-{{i.suit}}	
-		
-	{% endfor %}
+
+{% for i in item %}
 	
+	<div class="card">
+
+		{% if i.suit == "&hearts;" %}
+			<p>{{i.rank}}</p>
+
+			<p>&#10084;&#65039;</p>
+
+
+		{% endif %}
+
+		{% if i.suit == "&diams;" %}
+
+			<p>&diams;{{i.rank}}</p>
+
+		{% endif %}
+
+		{% if i.suit == "&clubs;" %}
+
+
+			<p>&clubs;{{i.rank}}</p>
+
+
+		{% endif %}
+
+		{% if i.suit == "&spades;" %}
+
+			<p>&spades;{{i.rank}}</p>
+
+		{% endif %}
+
+	</div>
+
 {% endfor %}
+{% endfor %}
+
+
+			</div>
 
 
 

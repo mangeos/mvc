@@ -13,65 +13,58 @@ Card
 {% block content %}
 
 	<section>
-<nav>
-	<ul>
-		<li>
-			<a href={{ asset('./') }}>Presentation</a>
-		</li>
-		<li>
-			<a href={{ asset('./about') }}>About</a>
-		</li>
-		<li>
-			<a href={{ asset('./report') }}>report</a>
-		</li>
-		<li>
-			<a href={{ asset('./card') }}>Card</a>
-		</li>
-		<hr>
-	</ul>
-</nav>
-
-
+		<nav>
+			<ul>
+				<li>
+					<a href={{ asset('./') }}>Presentation</a>
+				</li>
+				<li>
+					<a href={{ asset('./about') }}>About</a>
+				</li>
+				<li>
+					<a href={{ asset('./report') }}>report</a>
+				</li>
+				<li>
+					<a href={{ asset('./card') }}>Card</a>
+				</li>
+				<hr>
+			</ul>
+		</nav>
 		<article>
-				<h1>{{ title }}</h1>
+			<h1>{{ title }}</h1>
 			<div class="container">
 				{% for item in test %}
-<div class="card">
+					<div class="card">
 
-{% if item.suit == "&hearts;" %}
-<p>{{item.rank}}</p>
+						{% if item.suit == "&hearts;" %}
+						<p>{{item.rank}}</p>
 
-<p>&#10084;&#65039;</p>
-
-
-{% endif %}
-
-{% if item.suit == "&diams;" %}
-
-<p>&diams;{{item.rank}}</p>
+						<p>&#10084;&#65039;</p>
 
 
-{% endif %}
+						{% endif %}
 
-{% if item.suit == "&clubs;" %}
+						{% if item.suit == "&diams;" %}
 
+						<p>&diams;{{item.rank}}</p>
+						
+						{% endif %}
 
-<p>&clubs;{{item.rank}}</p>
-
-
-{% endif %}
-
-{% if item.suit == "&spades;" %}
+						{% if item.suit == "&clubs;" %}
 
 
-<p>&spades;{{item.rank}}</p>
+						<p>&clubs;{{item.rank}}</p>
 
 
-{% endif %}
+						{% endif %}
 
+						{% if item.suit == "&spades;" %}
 
+						<p>&spades;{{item.rank}}</p>
 
-</div>
+						{% endif %}
+
+					</div>
 
 				{% endfor %}
 
