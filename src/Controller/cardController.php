@@ -8,21 +8,19 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
-class cardController extends AbstractController
+class CardController extends AbstractController
 {
     /**
      * @Route("/card")
      */
     public function homeCards(): Response
     {
-     
         $title = "Cards undersidor";
-        
         return $this->render('card/card.html.twig', [
             'title' => $title,
         ]);
     }
-    
+
     /**
      * @Route("/card/deck")
      */
@@ -56,7 +54,7 @@ class cardController extends AbstractController
         ]);
     }
 
-    
+
      /**
      * @Route(
      *      "/card/deck/draw",
@@ -69,45 +67,39 @@ class cardController extends AbstractController
        // var_dump($session->get('cards'));
        // var_dump(count($session->get('cards')));
         $c = $session->get('counter');
-        $session->set('counter', $c+1);
+        $session->set('counter', $c + 1);
         if ($session->get('counter') == 1) {
          //  var_dump($request->query->get("number"));
             # code...
             $d = new \App\Deck\Deck();
             $d->createDeck();
             $d->shuffle();
-            
+
             $allCards = $d->cards;
             $session->set('cards', $allCards);
-            
+
             //takes first card in the deck
             //array_pop(array_reverse($allCards));
-            $oneCard = [array_splice($allCards,0,1)];
+            $oneCard = [array_splice($allCards, 0, 1)];
            // var_dump(count($allCards));
-         
+
            //save session with one card lesser than before
             $session->set('cards', $allCards);
-
-        }
-      
-        else {
+        } else {
             # code...
-    
-            var_dump($request->query->get("number")); 
-            $amount = $request->query->get("number") === NULL ? 1:$request->query->get("number");
-            # code...
-            
 
-            $deletedCards=[];
-            for ($i=0; $i < $amount; $i++) { 
+            //var_dump($request->query->get("number"));
+            $amount = $request->query->get("number") === null ? 1 : $request->query->get("number");
+            # code...
+            $deletedCards = [];
+            for ($i = 0; $i < $amount; $i++) {
                 # code...
                 $t = $session->get("cards");
                 // var_dump(array_splice( $t,1,1));
-                array_push($deletedCards, array_splice( $t,0,1));
+                array_push($deletedCards, array_splice($t, 0, 1));
                 // var_dump($deletedCards);
                 $session->set('cards', $t);
             }
-                    
         }
         $r = $session->get('cards');
       //  var_dump($session->get('cards'));
@@ -115,8 +107,7 @@ class cardController extends AbstractController
         $title = "Korten är blandade";
         return $this->render('card/cardDraw.html.twig', [
             'title'         => $title,
-            
-            'countCardsLeft'=> $countCardsLeft,
+            'countCardsLeft' => $countCardsLeft,
             'onecard'       => $oneCard ?? $deletedCards
         ]);
     }
@@ -128,45 +119,38 @@ class cardController extends AbstractController
      */
 
     public function cardDraw2(Request $request, SessionInterface $session, $number): Response
- {
-       // var_dump($session->get('cards'));
-       // var_dump(count($session->get('cards')));
+    {
         $c = $session->get('counter');
-        $session->set('counter', $c+1);
+        $session->set('counter', $c + 1);
         if ($session->get('counter') == 1) {
           //  var_dump($number);
             # code...
             $d = new \App\Deck\Deck();
             $d->createDeck();
             $d->shuffle();
-            
+
             $allCards = $d->cards;
             $session->set('cards', $allCards);
-            
+
             //takes first card in the deck
-            $oneCard = [array_splice($allCards,0,$number)];
+            $oneCard = [array_splice($allCards, 0, $number)];
            // var_dump(count($allCards));
-         
+
            //save session with one card lesser than before
             $session->set('cards', $allCards);
-
-        }else {
+        } else {
             # code...
-    
-          //  var_dump($request->query->get("number")); 
             $amount = $number;
             # code...
-            
-            $deletedCards=[];
-            for ($i=0; $i < $amount; $i++) { 
+            $deletedCards = [];
+            for ($i = 0; $i < $amount; $i++) {
                 # code...
                 $t = $session->get("cards");
                 // var_dump(array_splice( $t,1,1));
-                array_push($deletedCards, array_splice( $t,0,1));
+                array_push($deletedCards, array_splice($t, 0, 1));
                 // var_dump($deletedCards);
                 $session->set('cards', $t);
             }
-                
             // $countCardsLeft = count( $_SESSION["cards"]);
         }
         $r = $session->get('cards');
@@ -174,8 +158,7 @@ class cardController extends AbstractController
         $title = "Korten är blandade";
         return $this->render('card/cardDraw.html.twig', [
             'title'         => $title,
-            
-            'countCardsLeft'=> $countCardsLeft,
+            'countCardsLeft' => $countCardsLeft,
             'onecard'       => $oneCard ?? $deletedCards
         ]);
     }
@@ -189,37 +172,32 @@ class cardController extends AbstractController
      */
     public function players(Request $request, SessionInterface $session, $amountOfPlayers, $amountOfCards): Response
     {
-
-        
         //create deck
         $d = new \App\Deck\Deck();
         $d->createDeck();
         $d->shuffle();
-        
+
         $allCards = $d->cards;
         //var_dump(count($allCards));
 
         $allPlayers = [];
-        for ($i=0; $i < $amountOfPlayers; $i++) { 
+        for ($i = 0; $i < $amountOfPlayers; $i++) {
             # code...
             $handCards = [array_splice($allCards, 0, $amountOfCards)];
-            $onePlayer = new \App\Player\Player("Player".$i+1, $handCards);
+            $onePlayer = new \App\Player\Player("Player" . $i + 1, $handCards);
 
             array_push($allPlayers, $onePlayer);
-
         }
-        
 
         return $this->render('card/cardDeckDeal.html.twig', [
-            'title'             =>"test",
+            'title'             => "test",
             'amountOfPlayers'   => $amountOfPlayers,
             'amountOfCards'     => $amountOfCards,
             'allPlayers'        => $allPlayers,
             'theRest'           => $allCards
         ]);
     }
-    
-    
+
  /**
      * @Route("/card/deck2")
      */

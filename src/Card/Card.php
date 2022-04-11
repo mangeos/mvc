@@ -2,7 +2,6 @@
 
 namespace App\Card;
 
-
 class Card
 {
 /**
@@ -12,11 +11,10 @@ class Card
  * @param string $rank   The rank of the card.
  * @param int    $value  The value of the value.
  */
-public function __construct(string $suit, string $rank, int $value)
-{
-    $this->suit = $suit;
-    $this->rank = $rank;
-    $this->value = $value;
-}
-    
+    public function __construct(string $suit, string $rank, int $value)
+    {
+        $this->suit = $suit;
+        $this->rank = $rank;
+        $this->value = $value;
+    }
 }
