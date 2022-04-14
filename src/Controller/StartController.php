@@ -40,4 +40,15 @@ class StartController extends AbstractController
             'title' => $title,
         ]);
     }
+
+      /**
+    * @Route("/game/card")
+    */
+    public function gameCard(): Response
+    {
+        $title = "Report";
+        return $this->render('report/report.html.twig', [
+            'title' => $title,
+        ]);
+    }
 }
