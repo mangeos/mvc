@@ -16,7 +16,30 @@
 	        {% block Rtitle %}{% endblock %}
         </h1>
     </header>
+<section>
+	<nav>
+		<ul>
+			<li>
+				<a href={{ asset('./') }}>Presentation</a>
+			</li>
+			<li>
+				<a href={{ asset('./about') }}>About</a>
+			</li>
+			<li>
+				<a href={{ asset('./report') }}>Report</a>
+			</li>
+			<li>
+				<a href={{ asset('./card') }}>Card</a>
+			</li>
+            <li>
+				<a href={{ asset('./game') }}>Game</a>
+			</li>
+			<hr>
+		</ul>
+	</nav>
         {% block content %}{% endblock %}
+</section>
+
     <footer>
         <h2>Kursen Mvc</h2>
         <div class="wrapperfoot">

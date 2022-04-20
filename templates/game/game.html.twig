@@ -1,0 +1,42 @@
+{% extends "base.html.twig" %}
+{% block title %}
+{{title}}
+
+{% endblock %}
+
+{% block Rtitle %}
+{{title}}
+
+{% endblock %}
+
+
+{% block content %}
+
+		<article>
+				<h1>{{ title }}</h1>
+				<ul>
+					<li><a href= {{ asset('./game/doc') }}>game/doc</a></li>
+					<li><a href= {{ asset('./game/game21') }}>Spela 21</a></li>
+				</ul>
+			<div class="container">
+				
+				<h2>Black Jack</h2>
+			<p>Spelets idé är att med två eller flera kort försöka uppnå det sammanlagda värdet 21, eller komma så nära som möjligt utan att överskrida 21.
+
+En spelrunda kan se ut så här när en spelare spelar mot banken.
+
+Spelet leder till en landdningssida där man kan läsa spelregler och se dokumentation om spelet samt påbörja ett spel.
+Spelplanen visas och spelaren och banken har inte tagit några kort.
+Spelaren tar ett kort. Kortet visas.
+Spelaren kan bestämma att stanna eller ta ytterligare ett kort.
+Om spelaren får över 21 vinner banken.
+När spelaren stannarså är det bankens tur.
+Banken är inte medveten om spelarens korthand.
+Banken plockar kort tills den stannar eller har över 21.
+Banken vinner vid lika eller om banken har mer än spelaren.
+Spelaren vinner om banken får över 21.
+Därefter kan man påbörja en ny omgång.</p>
+			</div>
+		</article>
+{% endblock %}
+

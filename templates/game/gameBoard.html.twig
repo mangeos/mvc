@@ -1,0 +1,146 @@
+{% extends "base.html.twig" %}
+{% block title %}
+{{title}}
+
+{% endblock %}
+
+{% block Rtitle %}
+{{title}}
+
+{% endblock %}
+
+
+{% block content %}
+
+		<article>
+	<div class="split">
+
+		<form method="post" action={{asset("./game/game21") }}>
+
+		<input type="submit" name="add" value="add">
+		
+		</form>
+		<form method="post" action={{asset("./game/game21") }}>
+		<input type="submit" name="stop" value="stop">
+		
+		</form>
+{{calculateWinner}}
+</div>
+<hr>
+			<div class="container">
+										
+
+
+				<div class="split">
+				<h1>{{ playersName }}</h1>
+				{% for item in playersHand %}
+				{% for p in item %}
+
+					
+				<div class="card">
+
+					{% if p.suit == "&hearts;" %}
+					<p>{{p.rank}}</p>
+
+					<p>&#10084;&#65039;</p>
+
+
+					{% endif %}
+
+					{% if p.suit == "&diams;" %}
+
+					<p>&diams;{{p.rank}}</p>
+					
+					{% endif %}
+
+					{% if p.suit == "&clubs;" %}
+
+
+					<p>&clubs;{{p.rank}}</p>
+
+
+					{% endif %}
+
+					{% if p.suit == "&spades;" %}
+
+					<p>&spades;{{p.rank}}</p>
+
+					{% endif %}
+
+				</div>
+
+				{% endfor %}
+				{% endfor %}
+				{% if playersPoints < 22 %}
+				<p>Du har {{playersPoints}} poäng</p>
+				{% else %}
+					<p>{{playersName}} förlorar med {{playersPoints}} poäng</p>
+				{% endif %}
+				
+				</div>
+				<hr>
+				<div class="split">
+					<h1>{{ dealersName }}</h1>
+						{% for item in dealersHand %}
+						{% for p in item %}
+
+							
+						<div class="card">
+
+							{% if p.suit == "&hearts;" %}
+							<p>{{p.rank}}</p>
+
+							<p>&#10084;&#65039;</p>
+
+
+							{% endif %}
+
+							{% if p.suit == "&diams;" %}
+
+							<p>&diams;{{p.rank}}</p>
+							
+							{% endif %}
+
+							{% if p.suit == "&clubs;" %}
+
+
+							<p>&clubs;{{p.rank}}</p>
+
+
+							{% endif %}
+
+							{% if p.suit == "&spades;" %}
+
+							<p>&spades;{{p.rank}}</p>
+
+							{% endif %}
+
+						</div>
+
+						{% endfor %}
+						{% endfor %}
+						{% if dealersPoints < 22 %}
+						<p>{{dealersName}} har {{dealersPoints}} poäng</p>
+						{% else %}
+							<p>{{dealersName}} förlorar med {{dealersPoints}} poäng</p>
+						{% endif %}
+						
+						</div>
+
+						
+		</div>
+
+			
+			</div>
+		</article>
+		<script>
+			function foo() {
+   				alert("sss");	
+				   setTimeout(function(){
+   window.location.reload(1);
+}, 500);
+			}
+		</script>
+
+{% endblock %}
+

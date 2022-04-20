@@ -10,26 +10,6 @@
 
 {% block content %}
 
-	<section>
-<nav>
-	<ul>
-		<li>
-			<a href={{ asset('./') }}>Presentation</a>
-		</li>
-		<li>
-			<a href={{ asset('./about') }}>About</a>
-		</li>
-		<li>
-			<a href={{ asset('./report') }}>Report</a>
-		</li>
-		<li>
-			<a href={{ asset('./card') }}>Card</a>
-		</li>
-		<hr>
-	</ul>
-</nav>
-
-
 		<article>
 				<h1>{{ title }}</h1>
 				<h2>Antal kort kvar {{countCardsLeft}}</h2>
@@ -81,8 +61,6 @@
 
 			</div>
 
-
-
 	</article>
-</section>{% endblock %}
+{% endblock %}
 

@@ -13,31 +13,11 @@ About
 
 {% block content %}
 
-<section>
-<nav>
-	<ul>
-		<li>
-			<a href={{ asset('./') }}>Presentation</a>
-		</li>
-		<li>
-			<a href={{ asset('./about') }}>About</a>
-		</li>
-		<li>
-			<a href={{ asset('./report') }}>report</a>
-		</li>
-		<li>
-			<a href={{ asset('./card') }}>Card</a>
-		</li>
-		<hr>
-	</ul>
-</nav>
-
-
 <article>
 	<div class="container">
 	<h1>{{ title }}</h1>
 
-<img style="width: 60%; padding: 1em; float: right;" src="./img/php.jpg" alt="ipanema">
+<img style="width: 60%; padding: 1em; float: right;" src={{ asset("./img/php.jpg") }} alt="ipanema">
 
 <p>
 Kursen Objektorienterade webbteknologier, a.k.a. mvc, fokuserar på objektorienterade programmeringstekniker i programmeringsspråket PHP. Klassiska objektorienterade konstruktioner hanteras tillsammans med objektorienterad programmering i webbaserat ramverk tillsammans med databaser samt enhetstestning.
@@ -47,6 +27,5 @@ Kursen Objektorienterade webbteknologier, a.k.a. mvc, fokuserar på objektorient
 </div>
 
     </article>
-</section>
 
 {% endblock %}

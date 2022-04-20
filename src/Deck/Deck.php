@@ -28,7 +28,7 @@ public function createDeck() {
 }
 
 public function shuffle(){
-    shuffle( $this->cards);
+    shuffle($this->cards);
 }
 
 

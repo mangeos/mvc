@@ -12,25 +12,6 @@
 
 {% block content %}
 
-<section>
-<nav>
-	<ul>
-		<li>
-			<a href={{ asset('./') }}>Presentation</a>
-		</li>
-		<li>
-			<a href={{ asset('./about') }}>About</a>
-		</li>
-		<li>
-			<a href={{ asset('./report') }}>report</a>
-		</li>
-		<li>
-			<a href={{ asset('./card') }}>Card</a>
-		</li>
-		<hr>
-	</ul>
-</nav>
-
 
 	<article>
 <div class="container">
@@ -41,7 +22,7 @@
 	Mitt namn är Magnus Östling och kommer från kallinge utanför ronneby.
 	
 	Gick energiprogrammet i karlskrona på gymnasiet.
-	<img style="width: 60%; padding: 1em; float: right;" src="./img/ipanema.jpg" alt="ipanema">
+	<img style="width: 60%; padding: 1em; float: right;" src={{ asset("./img/ipanema.jpg") }} alt="ipanema">
 	
 	2010 flyttade jag till oslo och bodde där i ca 5 år.
 	
@@ -62,7 +43,6 @@
 </div>
 
     </article>
-</section>
 
 {% endblock %}
 

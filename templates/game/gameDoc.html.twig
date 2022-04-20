@@ -1,0 +1,33 @@
+{% extends "base.html.twig" %}
+{% block title %}
+	{{title}}
+{% endblock %}
+
+{% block Rtitle %}
+	{{title}}
+{% endblock %}
+
+
+{% block content %}
+	<article>
+	<div class="container">
+		<div>
+			<h2>Flowschema</h2>
+			<img style="width: 100%; padding: 1em; float: right;" src={{ asset("./img/BlackJack.png") }} alt="flowschema">
+		</div>
+		<div>
+			<h2>Pseudo kod</h2>
+			<ol>
+  				<li>Initiera spel 21</li>
+				<li>Ge spelare ett kort</li>
+				<li>If playersCardHand > 21 Then: dealer wins</li>
+				<li>If player stannar Then: dealers tur att spela
+				Else: Spelare börja om från steg 2</li>
+				<li>If playersHand > dealersHand Then: player wins
+					Else: dealer wins</li>
+			</ol>
+		</div>
+	</div>
+	</article>
+{% endblock %}
+

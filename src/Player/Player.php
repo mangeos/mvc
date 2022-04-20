@@ -15,7 +15,20 @@ public function __construct(string $name, array $playerCards)
 {
     $this->name = $name;
     $this->playerCards = $playerCards;
+    $this->points = 0;
     
 }
+public function add_one_card($oneCard)
+{
+    array_push($this->playerCards, $oneCard);
+
+}
+
+public function add_points(int $point)
+{
+    $this->points += $point;
+
+}
+
 
 }
