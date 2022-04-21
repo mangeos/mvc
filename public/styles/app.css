@@ -120,21 +120,13 @@ footer h2 {
   border-width: 1px;
   border-style: solid;
   color: #000000;
-  /*
-  background-color:white;
-  border-color: #808080 #000000 #000000 #808080;
-  border-width: 1px;
-  border-style: solid;
-  color: #000000;
-  font-size: 20pt;
-  width: 3.75em;
-  height: 5.00em;
-
-  flex: 1 0 21%;
-  */
 }
 
 .player {
   display: flex;
 flex-direction: column;
+}
+
+article .formgame {
+  display: flex;
 }

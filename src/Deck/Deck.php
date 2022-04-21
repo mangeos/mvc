@@ -18,7 +18,7 @@ public function __construct()
 public function createDeck() {
     $suits = ['&hearts;', '&diams;', '&clubs;', '&spades;'];
     $ranks = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
-    $values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+    $values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10];
 
     for ($i = 0; $i < count($suits); $i++) {
         for ($j = 0; $j < count($ranks); $j++) {

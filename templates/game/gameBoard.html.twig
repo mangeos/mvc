@@ -13,16 +13,19 @@
 {% block content %}
 
 		<article>
-	<div class="split">
+	<div class="formgame">
 
 		<form method="post" action={{asset("./game/game21") }}>
-
-		<input type="submit" name="add" value="add">
-		
+			<input type="submit" name="add" value="add">
 		</form>
-		<form method="post" action={{asset("./game/game21") }}>
-		<input type="submit" name="stop" value="stop">
 		
+		<form method="post" action={{asset("./game/game21") }}>
+			<input type="submit" name="stop" value="stop">
+		</form>
+
+			
+		<form method="post" action={{asset("./game/game21") }}>
+			<input type="submit" name="clear" value="clear">
 		</form>
 {{calculateWinner}}
 </div>
@@ -74,7 +77,9 @@
 				{% if playersPoints < 22 %}
 				<p>Du har {{playersPoints}} poäng</p>
 				{% else %}
+					<div style='background: red; border-radius:5px; padding:1px;'>
 					<p>{{playersName}} förlorar med {{playersPoints}} poäng</p>
+					</div>
 				{% endif %}
 				
 				</div>
