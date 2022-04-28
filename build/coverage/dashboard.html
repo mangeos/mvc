@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for C:\Users\Magnus\OneDrive\dbwebb-kurser\mvc\me\report\src</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="_css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="_css/nv.d3.min.css" rel="stylesheet" type="text/css">
+  <link href="_css/style.css" rel="stylesheet" type="text/css">
+  <link href="_css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="index.html">C:\Users\Magnus\OneDrive\dbwebb-kurser\mvc\me\report\src</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Controller/CardController.php.html#11">App\Controller\CardController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/GameController.php.html#11">App\Controller\GameController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/JsonController.php.html#9">App\Controller\JsonController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/StartController.php.html#9">App\Controller\StartController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Deck/DeckWith2Jokers.php.html#7">App\Deck\DeckWith2Jokers</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Game/Game.php.html#5">App\Game\Game</a></td><td class="text-right">0%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Controller/CardController.php.html#11">App\Controller\CardController</a></td><td class="text-right">182</td></tr>
+       <tr><td><a href="Game/Game.php.html#5">App\Game\Game</a></td><td class="text-right">156</td></tr>
+       <tr><td><a href="Controller/GameController.php.html#11">App\Controller\GameController</a></td><td class="text-right">56</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Controller/CardController.php.html#16"><abbr title="App\Controller\CardController::homeCards">homeCards</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/CardController.php.html#27"><abbr title="App\Controller\CardController::startDeck">startDeck</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/CardController.php.html#42"><abbr title="App\Controller\CardController::shuffleDeck">shuffleDeck</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/CardController.php.html#65"><abbr title="App\Controller\CardController::cardDraw">cardDraw</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/CardController.php.html#121"><abbr title="App\Controller\CardController::cardDraw2">cardDraw2</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/CardController.php.html#173"><abbr title="App\Controller\CardController::players">players</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/CardController.php.html#204"><abbr title="App\Controller\CardController::startDeck2">startDeck2</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/GameController.php.html#16"><abbr title="App\Controller\GameController::homeGame">homeGame</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/GameController.php.html#27"><abbr title="App\Controller\GameController::gameDocs">gameDocs</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/GameController.php.html#40"><abbr title="App\Controller\GameController::game21">game21</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/JsonController.php.html#15"><abbr title="App\Controller\JsonController::numbers">numbers</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/StartController.php.html#14"><abbr title="App\Controller\StartController::present">present</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/StartController.php.html#25"><abbr title="App\Controller\StartController::about">about</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/StartController.php.html#36"><abbr title="App\Controller\StartController::report">report</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/StartController.php.html#47"><abbr title="App\Controller\StartController::gameCard">gameCard</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Deck/DeckWith2Jokers.php.html#9"><abbr title="App\Deck\DeckWith2Jokers::addJokers">addJokers</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Game/Game.php.html#11"><abbr title="App\Game\Game::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Game/Game.php.html#18"><abbr title="App\Game\Game::create_deck_and_shuffle">create_deck_and_shuffle</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Game/Game.php.html#26"><abbr title="App\Game\Game::take_one_card">take_one_card</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Game/Game.php.html#47"><abbr title="App\Game\Game::get_player">get_player</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Game/Game.php.html#52"><abbr title="App\Game\Game::get_dealer">get_dealer</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Game/Game.php.html#57"><abbr title="App\Game\Game::calculate_winner">calculate_winner</abbr></a></td><td class="text-right">0%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Controller/GameController.php.html#40"><abbr title="App\Controller\GameController::game21">game21</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="Controller/CardController.php.html#65"><abbr title="App\Controller\CardController::cardDraw">cardDraw</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Game/Game.php.html#26"><abbr title="App\Game\Game::take_one_card">take_one_card</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Game/Game.php.html#57"><abbr title="App\Game\Game::calculate_winner">calculate_winner</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Controller/CardController.php.html#121"><abbr title="App\Controller\CardController::cardDraw2">cardDraw2</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/CardController.php.html#173"><abbr title="App\Controller\CardController::players">players</abbr></a></td><td class="text-right">6</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 9.2.15</a> using <a href="https://secure.php.net/" target="_top">PHP 8.1.4</a> and <a href="https://phpunit.de/">PHPUnit 9.5.20</a> at Thu Apr 28 20:03:48 CEST 2022.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="_js/jquery.min.js" type="text/javascript"></script>
+  <script src="_js/d3.min.js" type="text/javascript"></script>
+  <script src="_js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([6,0,0,0,0,0,0,0,0,0,0,4], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([22,0,0,0,0,0,0,0,0,0,0,7], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[100,1,"<a href=\"Card\/Card.php.html#5\">App\\Card\\Card<\/a>"],[0,13,"<a href=\"Controller\/CardController.php.html#11\">App\\Controller\\CardController<\/a>"],[0,7,"<a href=\"Controller\/GameController.php.html#11\">App\\Controller\\GameController<\/a>"],[0,1,"<a href=\"Controller\/JsonController.php.html#9\">App\\Controller\\JsonController<\/a>"],[0,4,"<a href=\"Controller\/StartController.php.html#9\">App\\Controller\\StartController<\/a>"],[100,5,"<a href=\"Deck\/Deck.php.html#7\">App\\Deck\\Deck<\/a>"],[0,1,"<a href=\"Deck\/DeckWith2Jokers.php.html#7\">App\\Deck\\DeckWith2Jokers<\/a>"],[0,12,"<a href=\"Game\/Game.php.html#5\">App\\Game\\Game<\/a>"],[100,0,"<a href=\"Kernel.php.html#8\">App\\Kernel<\/a>"],[100,3,"<a href=\"Player\/Player.php.html#6\">App\\Player\\Player<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[100,1,"<a href=\"Card\/Card.php.html#17\">App\\Card\\Card::__construct<\/a>"],[0,1,"<a href=\"Controller\/CardController.php.html#16\">App\\Controller\\CardController::homeCards<\/a>"],[0,1,"<a href=\"Controller\/CardController.php.html#27\">App\\Controller\\CardController::startDeck<\/a>"],[0,1,"<a href=\"Controller\/CardController.php.html#42\">App\\Controller\\CardController::shuffleDeck<\/a>"],[0,4,"<a href=\"Controller\/CardController.php.html#65\">App\\Controller\\CardController::cardDraw<\/a>"],[0,3,"<a href=\"Controller\/CardController.php.html#121\">App\\Controller\\CardController::cardDraw2<\/a>"],[0,2,"<a href=\"Controller\/CardController.php.html#173\">App\\Controller\\CardController::players<\/a>"],[0,1,"<a href=\"Controller\/CardController.php.html#204\">App\\Controller\\CardController::startDeck2<\/a>"],[0,1,"<a href=\"Controller\/GameController.php.html#16\">App\\Controller\\GameController::homeGame<\/a>"],[0,1,"<a href=\"Controller\/GameController.php.html#27\">App\\Controller\\GameController::gameDocs<\/a>"],[0,5,"<a href=\"Controller\/GameController.php.html#40\">App\\Controller\\GameController::game21<\/a>"],[0,1,"<a href=\"Controller\/JsonController.php.html#15\">App\\Controller\\JsonController::numbers<\/a>"],[0,1,"<a href=\"Controller\/StartController.php.html#14\">App\\Controller\\StartController::present<\/a>"],[0,1,"<a href=\"Controller\/StartController.php.html#25\">App\\Controller\\StartController::about<\/a>"],[0,1,"<a href=\"Controller\/StartController.php.html#36\">App\\Controller\\StartController::report<\/a>"],[0,1,"<a href=\"Controller\/StartController.php.html#47\">App\\Controller\\StartController::gameCard<\/a>"],[100,1,"<a href=\"Deck\/Deck.php.html#13\">App\\Deck\\Deck::__construct<\/a>"],[100,3,"<a href=\"Deck\/Deck.php.html#18\">App\\Deck\\Deck::createDeck<\/a>"],[100,1,"<a href=\"Deck\/Deck.php.html#30\">App\\Deck\\Deck::shuffle<\/a>"],[0,1,"<a href=\"Deck\/DeckWith2Jokers.php.html#9\">App\\Deck\\DeckWith2Jokers::addJokers<\/a>"],[0,1,"<a href=\"Game\/Game.php.html#11\">App\\Game\\Game::__construct<\/a>"],[0,1,"<a href=\"Game\/Game.php.html#18\">App\\Game\\Game::create_deck_and_shuffle<\/a>"],[0,4,"<a href=\"Game\/Game.php.html#26\">App\\Game\\Game::take_one_card<\/a>"],[0,1,"<a href=\"Game\/Game.php.html#47\">App\\Game\\Game::get_player<\/a>"],[0,1,"<a href=\"Game\/Game.php.html#52\">App\\Game\\Game::get_dealer<\/a>"],[0,4,"<a href=\"Game\/Game.php.html#57\">App\\Game\\Game::calculate_winner<\/a>"],[100,1,"<a href=\"Player\/Player.php.html#17\">App\\Player\\Player::__construct<\/a>"],[100,1,"<a href=\"Player\/Player.php.html#24\">App\\Player\\Player::add_one_card<\/a>"],[100,1,"<a href=\"Player\/Player.php.html#30\">App\\Player\\Player::add_points<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>

@@ -15,8 +15,8 @@ class GameController extends AbstractController
      */
     public function homeGame(): Response
     {
-       $title = "Games undersidor";
-       return $this->render('game/game.html.twig', [
+        $title = "Games undersidor";
+        return $this->render('game/game.html.twig', [
            'title' => $title,
        ]);
     }
@@ -40,62 +40,59 @@ class GameController extends AbstractController
     public function game21(Request $request, SessionInterface $session): Response
     {
         $title = "Game 21";
-        
+
         if ($request->request->get('stop')) {
             # code...
             $game21 = $session->get('game');
-            
-            
-           
-            
-            while( $game21->get_dealer()->points < $game21->get_player()->points) {
+
+
+
+
+            while ($game21->get_dealer()->points < $game21->get_player()->points) {
                 # code...
                 $game21->take_one_card("Dealer");
             }
             $calc = $game21->calculate_winner();
-                
-            $session->set('game',  $game21);
-        }
-        elseif ($request->request->get('clear')) {
+
+            $session->set('game', $game21);
+        } elseif ($request->request->get('clear')) {
             # code...
             $session->clear();
             $game21 = new \App\Game\Game();
             $game21->create_deck_and_shuffle();
-                
+
             $game21->take_one_card("Player");
-                
-            $session->set('game',  $game21);
-        }
-        else {
+
+            $session->set('game', $game21);
+        } else {
             # code...
             if ($session->get('game')) {
                 # code...
                 $game21 = $session->get('game');
-                
+
                 $game21->take_one_card("Player");
-               
-                
-                $session->set('game',  $game21);
-                
+
+
+                $session->set('game', $game21);
             } else {
                 # code...
                 //create game21
                 $game21 = new \App\Game\Game();
                 $game21->create_deck_and_shuffle();
-                
+
                 $game21->take_one_card("Player");
-                
-                $session->set('game',  $game21);
+
+                $session->set('game', $game21);
             }
         }
-           # print_r($game21->get_player()->playerCards);
-            return $this->render('game/gameBoard.html.twig', [
+        # print_r($game21->get_player()->playerCards);
+        return $this->render('game/gameBoard.html.twig', [
                 'title'       => $title,
                 'playersHand' => $game21->get_player()->playerCards,
                 'playersName' => $game21->get_player()->name,
                 'playersPoints'=> $game21->get_player()->points,
 
-                'calculateWinner'=> $calc ?? "", 
+                'calculateWinner'=> $calc ?? "",
 
                 'dealersHand' => $game21->get_dealer()->playerCards ?? "",
                 'dealersName' => $game21->get_dealer()->name ?? "",
@@ -103,4 +100,3 @@ class GameController extends AbstractController
             ]);
     }
 }
-

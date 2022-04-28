@@ -41,7 +41,7 @@ class StartController extends AbstractController
         ]);
     }
 
-      /**
+    /**
     * @Route("/game/card")
     */
     public function gameCard(): Response

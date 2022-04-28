@@ -4,13 +4,16 @@ namespace App\Card;
 
 class Card
 {
-/**
- * Constructor to create a Card.
- *
- * @param string $suit   The suit of the card.
- * @param string $rank   The rank of the card.
- * @param int    $value  The value of the value.
- */
+    public $suit;
+    public $rank;
+    public $value;
+    /**
+     * Constructor to create a Card.
+     *
+     * @param string $suit   The suit of the card.
+     * @param string $rank   The rank of the card.
+     * @param int    $value  The value of the value.
+     */
     public function __construct(string $suit, string $rank, int $value)
     {
         $this->suit = $suit;

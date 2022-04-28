@@ -92,13 +92,15 @@
             "cache:clear": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd"
         },
-        "csfix": "tools/php-cs-fixer/vendor/bin/php-cs-fixer fix src",
+        "csfix": ["tools/php-cs-fixer/vendor/bin/php-cs-fixer fix src" , "tools/php-cs-fixer/vendor/bin/php-cs-fixer fix tests"],
         "phpcs": "tools/php-codesniffer/vendor/bin/phpcs --standard=PSR12 src",
         "phpcbf": "tools/php-codesniffer/vendor/bin/phpcbf --standard=PSR12 src",
-
+        
         "phpmd": "tools/phpmd/vendor/bin/phpmd src text phpmd.xml || true",
         "phpstan": "tools/phpstan/vendor/bin/phpstan analyse -l 9 src || true",
         "phpcpd": "tools/phpcpd/vendor/bin/phpcpd src || true",
+        "phpdoc": "tools/phpdoc/phpdoc",
+        "phpunit": ["@putenv XDEBUG_MODE=coverage", "php bin/phpunit", "@putenv --coverage-text tests/Game"],
         "lint": [
             "@phpcpd",
             "@phpmd",
