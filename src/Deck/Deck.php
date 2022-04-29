@@ -4,6 +4,7 @@ namespace App\Deck;
 
 class Deck
 {
+    public $cards;
     /**
      * Constructor to create a Deck.
      *
