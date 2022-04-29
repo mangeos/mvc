@@ -11,6 +11,21 @@ Search.appendIndex(
             "summary": "Constructor\u0020to\u0020create\u0020a\u0020Card.",
             "url": "classes/App-Card-Card.html#method___construct"
         },                {
+            "fqsen": "\\App\\Card\\Card\u003A\u003A\u0024suit",
+            "name": "suit",
+            "summary": "",
+            "url": "classes/App-Card-Card.html#property_suit"
+        },                {
+            "fqsen": "\\App\\Card\\Card\u003A\u003A\u0024rank",
+            "name": "rank",
+            "summary": "",
+            "url": "classes/App-Card-Card.html#property_rank"
+        },                {
+            "fqsen": "\\App\\Card\\Card\u003A\u003A\u0024value",
+            "name": "value",
+            "summary": "",
+            "url": "classes/App-Card-Card.html#property_value"
+        },                {
             "fqsen": "\\App\\Controller\\CardController",
             "name": "CardController",
             "summary": "",
@@ -126,6 +141,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Deck-Deck.html#method_shuffle"
         },                {
+            "fqsen": "\\App\\Deck\\Deck\u003A\u003A\u0024cards",
+            "name": "cards",
+            "summary": "",
+            "url": "classes/App-Deck-Deck.html#property_cards"
+        },                {
             "fqsen": "\\App\\Deck\\DeckWith2Jokers",
             "name": "DeckWith2Jokers",
             "summary": "",
@@ -171,6 +191,21 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Game-Game.html#method_calculate_winner"
         },                {
+            "fqsen": "\\App\\Game\\Game\u003A\u003A\u0024deck",
+            "name": "deck",
+            "summary": "",
+            "url": "classes/App-Game-Game.html#property_deck"
+        },                {
+            "fqsen": "\\App\\Game\\Game\u003A\u003A\u0024dealer",
+            "name": "dealer",
+            "summary": "",
+            "url": "classes/App-Game-Game.html#property_dealer"
+        },                {
+            "fqsen": "\\App\\Game\\Game\u003A\u003A\u0024player",
+            "name": "player",
+            "summary": "",
+            "url": "classes/App-Game-Game.html#property_player"
+        },                {
             "fqsen": "\\App\\Kernel",
             "name": "Kernel",
             "summary": "",
@@ -195,6 +230,16 @@ Search.appendIndex(
             "name": "add_points",
             "summary": "",
             "url": "classes/App-Player-Player.html#method_add_points"
+        },                {
+            "fqsen": "\\App\\Player\\Player\u003A\u003A\u0024name",
+            "name": "name",
+            "summary": "",
+            "url": "classes/App-Player-Player.html#property_name"
+        },                {
+            "fqsen": "\\App\\Player\\Player\u003A\u003A\u0024playerCards",
+            "name": "playerCards",
+            "summary": "",
+            "url": "classes/App-Player-Player.html#property_playerCards"
         },                {
             "fqsen": "\\",
             "name": "\\",
