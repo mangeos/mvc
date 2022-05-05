@@ -1,0 +1,33 @@
+{% extends "base.html.twig" %}
+{% block title %}
+	Report
+{% endblock %}
+
+{% block Rtitle %}
+	{{title}}
+
+{% endblock %}
+
+
+{% block content %}
+
+	<article>
+		<div class="container">
+			{{title}}
+			<form method="POST">
+				<label for="title">title:</label><br>
+				<input type="text" id="title" name="title" required><br><br>
+				<label for="ISBN">ISBN:</label><br>
+				<input type="text" id="ISBN" name="ISBN" required><br><br>
+				<label for="forfattare">Författare:</label><br>
+				<input type="text" id="forfattare" name="forfattare" required><br><br>
+				<label for="bild">Bild:</label><br>
+				<input type="text" id="bild" name="bild" required><br><br>
+				<input type="submit" value="Lägg till">
+			</form>
+
+		</article>
+	</div>
+
+{% endblock %}
+

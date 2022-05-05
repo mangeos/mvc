@@ -1,0 +1,56 @@
+{% extends "base.html.twig" %}
+{% block title %}
+	Report
+{% endblock %}
+
+{% block Rtitle %}
+	{{title}}
+
+{% endblock %}
+
+
+{% block content %}
+
+	<article>
+		<div class="container">
+<table>
+	<tr>
+		<th>Id</th>
+		<th>Titel</th>
+		<th>Författare</th>
+		<th>Bild</th>
+		<th>ISBN</th>
+	</tr>
+
+{% for item in Biblioteks %}
+	<tr>
+
+<td>
+<a href={{path("bibliotek_by_id",{'id':item.id} )}}>{{item.id}}</a>
+
+</td>
+
+
+<td>{{item.titel}}</td>
+
+<td>{{item.författare}}</td>
+<td>{{item.bild}}</td>
+
+<td>{{item.ISBN}}</td>
+
+
+
+		
+	</tr>
+		{% endfor %}
+
+</table>
+
+
+
+
+		</article>
+	</div>
+
+{% endblock %}
+

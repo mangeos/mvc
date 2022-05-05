@@ -1,0 +1,49 @@
+{% extends "base.html.twig" %}
+{% block title %}
+	Bok
+{% endblock %}
+
+{% block Rtitle %}
+	{{title}}
+
+{% endblock %}
+
+
+{% block content %}
+
+	<article>
+		<div class="container">
+
+
+
+<div>
+
+<h1>{{ Bibliotek.titel }}</h1>
+<img src="{{ Bibliotek.bild }}" alt="Italian Trulli">
+<p>ISBN:{{ Bibliotek.ISBN }}</p>
+
+<form method="post" action={{path("Bibliotek_delete_by_id",{'id':Bibliotek.id}) }}>
+
+
+	<button type="submit">Update</button>
+</form>
+
+<form method="post" action={{path("Bibliotek_delete_by_id",{'id':Bibliotek.id} ) }}>
+
+
+
+	<button type="submit">Delete</button>
+</form>
+
+
+</div>
+
+
+
+
+
+		</article>
+	</div>
+
+{% endblock %}
+

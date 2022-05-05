@@ -1,0 +1,25 @@
+{% extends "base.html.twig" %}
+{% block title %}
+	Report
+{% endblock %}
+
+{% block Rtitle %}
+{{title}}
+
+{% endblock %}
+
+
+{% block content %}
+
+	<article>
+<div class="container">
+<ul>
+	<li><a href= {{ asset('./bibliotek/create') }}>create</a></li>
+	<li><a href= {{ asset('./bibliotek/show') }}>Show</a></li>
+</ul>
+	
+    </article>
+</div>
+
+{% endblock %}
+
