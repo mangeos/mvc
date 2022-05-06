@@ -1,6 +1,7 @@
 {% extends "base.html.twig" %}
 {% block title %}
-	Report
+{{title}}
+
 {% endblock %}
 
 {% block Rtitle %}
@@ -13,19 +14,21 @@
 
 	<article>
 		<div class="container">
+			{{title}}
 			<div>
 			<form method="POST">
-				<label for="title">title:</label><br>
-				<input type="text" id="title" name="title" required><br><br>
+				
+				<label for="title">Title:</label><br>
+				<input type="text" id="title" name="title" value="{{Bibliotek.titel}}" required><br><br>
 				<label for="ISBN">ISBN:</label><br>
-				<input type="text" id="ISBN" name="ISBN" required><br><br>
+				<input type="text" id="ISBN" name="ISBN" value="{{Bibliotek.ISBN}}" required><br><br>
 				<label for="forfattare">Författare:</label><br>
-				<input type="text" id="forfattare" name="forfattare" required><br><br>
+				<input type="text" id="forfattare" name="forfattare" value="{{Bibliotek.författare}}" required><br><br>
 				<label for="bild">Bild:</label><br>
-				<input type="text" id="bild" name="bild" required><br><br>
+				<input type="text" id="bild" name="bild" value="{{Bibliotek.bild}}" required><br><br>
 				<input type="submit" value="Lägg till" style="width:100%; border:0; height: 40px; background-color: #4CAF50; border-radius: 5px;">
 			</form>
-            </div>
+			</div>
 		</article>
 	</div>
 

@@ -13,34 +13,22 @@
 
 	<article>
 		<div class="container">
-
-
-
 <div>
-
 <h1>{{ Bibliotek.titel }}</h1>
-<img src="{{ Bibliotek.bild }}" alt="Italian Trulli">
+<img src="{{ Bibliotek.bild }}" alt="Bild">
 <p>ISBN:{{ Bibliotek.ISBN }}</p>
 
-<form method="post" action={{path("Bibliotek_delete_by_id",{'id':Bibliotek.id}) }}>
+<form style="padding-bottom:1%;" method="GET" action={{path("Bibliotek_update",{'id':Bibliotek.id} ) }}>
 
-
-	<button type="submit">Update</button>
+	<button type="submit" style="width:100%; border:0; height: 40px; background-color: #4CAF50; border-radius: 5px;">Redigera</button>
 </form>
 
-<form method="post" action={{path("Bibliotek_delete_by_id",{'id':Bibliotek.id} ) }}>
-
-
-
-	<button type="submit">Delete</button>
+<form method="post" action={{path("Bibliotek_delete_by_id",{'id':Bibliotek.id}) }}>
+	<button type="submit" style="width:100%; border:0; height: 40px; background-color: #F44336; border-radius: 5px;">Delete</button>
 </form>
 
 
 </div>
-
-
-
-
 
 		</article>
 	</div>

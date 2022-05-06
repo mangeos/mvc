@@ -11,8 +11,8 @@
 
 {% block content %}
 
-	<article>
-		<div class="container">
+<article>
+	<div class="container">
 <table>
 	<tr>
 		<th>Id</th>
@@ -21,36 +21,17 @@
 		<th>Bild</th>
 		<th>ISBN</th>
 	</tr>
-
-{% for item in Biblioteks %}
+	{% for item in Biblioteks %}
 	<tr>
-
-<td>
-<a href={{path("bibliotek_by_id",{'id':item.id} )}}>{{item.id}}</a>
-
-</td>
-
-
-<td>{{item.titel}}</td>
-
-<td>{{item.författare}}</td>
-<td>{{item.bild}}</td>
-
-<td>{{item.ISBN}}</td>
-
-
-
-		
+		<td><a href={{path("bibliotek_by_id", {'id':item.id} )}}>{{item.id}}</a></td>
+		<td>{{item.titel}}</td>
+		<td>{{item.författare}}</td>
+		<td>{{item.bild}}</td>
+		<td>{{item.ISBN}}</td>
 	</tr>
-		{% endfor %}
-
+	{% endfor %}
 </table>
-
-
-
-
-		</article>
-	</div>
-
+</article>
+		</div>
 {% endblock %}
 

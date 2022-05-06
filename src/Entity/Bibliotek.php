@@ -16,7 +16,7 @@ class Bibliotek
     #[ORM\Column(type: 'string', length: 255)]
     private $titel;
 
-    #[ORM\Column(type: 'integer')]
+    #[ORM\Column(type: 'string', length: 255)]
     private $ISBN;
 
     #[ORM\Column(type: 'string', length: 255)]

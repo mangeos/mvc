@@ -106,5 +106,54 @@ class BibliotekController extends AbstractController
         return $this->redirectToRoute('Bibliotek_show_all');
     }
     
+    /**
+    * @Route("/bibliotek/update/{id}", name="Bibliotek_update"),
+    * methods = {"GET","POST"}
+    */
+    public function updateBibliotek(Request $request, ManagerRegistry $doctrine, int $id): Response {
+        
+        if ($request->request->get('title')) {
+            $title = $request->request->get('title');
+            $ISBN = $request->request->get('ISBN');
+            $forfattare = $request->request->get('forfattare');
+            $bild = $request->request->get('bild');
+            
+       
+            $entityManager = $doctrine->getManager();
+            $Bibliotek = $entityManager->getRepository(Bibliotek::class)->find($id);
+            
+            if (!$Bibliotek) {
+                throw $this->createNotFoundException(
+                    'No product found for id '.$id
+                );
+            }
+
+            $Bibliotek->setTitel($title);
+            $Bibliotek->setISBN($ISBN);
+            $Bibliotek->setBild($bild);
+            $Bibliotek->setFörfattare($forfattare);
+        
+            // tell Doctrine you want to (eventually) save the bibliotek
+            // (no queries yet)
+            $entityManager->persist($Bibliotek);
+        
+            // actually executes the queries (i.e. the INSERT query)
+            $entityManager->flush();
+
+            return $this->redirectToRoute('Bibliotek_show_all');
+        }
+
+    
+        $entityManager = $doctrine->getManager();
+        $Bibliotek = $entityManager->getRepository(Bibliotek::class)->find($id);
+        
+        return $this->render('bibliotek/update.html.twig', [
+          "Bibliotek" => $Bibliotek,
+          "title"     => "Redigera"
+        ]);
+    }
+        
+
+
 }
 
