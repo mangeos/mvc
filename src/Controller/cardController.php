@@ -149,7 +149,7 @@ class CardController extends AbstractController
             'onecard'       => $oneCard ?? $deletedCards
         ]);
     }
-    
+
     /**
         * @Route(
         *      "/card/deck/deal/{amountOfPlayers}/{amountOfCards}",
