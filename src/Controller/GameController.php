@@ -18,7 +18,7 @@ class GameController extends AbstractController
         $title = "Games undersidor";
         return $this->render('game/game.html.twig', [
            'title' => $title,
-       ]);
+        ]);
     }
 
     /**
@@ -90,13 +90,13 @@ class GameController extends AbstractController
                 'title'       => $title,
                 'playersHand' => $game21->get_player()->playerCards,
                 'playersName' => $game21->get_player()->name,
-                'playersPoints'=> $game21->get_player()->points,
+                'playersPoints' => $game21->get_player()->points,
 
-                'calculateWinner'=> $calc ?? "",
+                'calculateWinner' => $calc ?? "",
 
                 'dealersHand' => $game21->get_dealer()->playerCards ?? "",
                 'dealersName' => $game21->get_dealer()->name ?? "",
-                'dealersPoints'=> $game21->get_dealer()->points ?? "",
+                'dealersPoints' => $game21->get_dealer()->points ?? "",
             ]);
     }
 }
