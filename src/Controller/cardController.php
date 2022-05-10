@@ -61,15 +61,11 @@ class CardController extends AbstractController
     *       methods = {"GET", "POST"}
     * )
     */
-
     public function cardDraw(Request $request, SessionInterface $session): Response
     {
-        // var_dump($session->get('cards'));
-        // var_dump(count($session->get('cards')));
         $c = $session->get('counter');
         $session->set('counter', $c + 1);
         if ($session->get('counter') == 1) {
-            //  var_dump($request->query->get("number"));
             # code...
             $d = new \App\Deck\Deck();
             $d->createDeck();
@@ -79,30 +75,23 @@ class CardController extends AbstractController
             $session->set('cards', $allCards);
 
             //takes first card in the deck
-            //array_pop(array_reverse($allCards));
             $oneCard = [array_splice($allCards, 0, 1)];
-            // var_dump(count($allCards));
 
             //save session with one card lesser than before
             $session->set('cards', $allCards);
         } else {
             # code...
-
-            //var_dump($request->query->get("number"));
             $amount = $request->query->get("number") === null ? 1 : $request->query->get("number");
             # code...
             $deletedCards = [];
             for ($i = 0; $i < $amount; $i++) {
                 # code...
                 $t = $session->get("cards");
-                // var_dump(array_splice( $t,1,1));
                 array_push($deletedCards, array_splice($t, 0, 1));
-                // var_dump($deletedCards);
                 $session->set('cards', $t);
             }
         }
         $r = $session->get('cards');
-        //  var_dump($session->get('cards'));
         $countCardsLeft = count($r);
         $title = "Korten är blandade";
         return $this->render('card/cardDraw.html.twig', [
@@ -111,19 +100,18 @@ class CardController extends AbstractController
             'onecard'       => $oneCard ?? $deletedCards
         ]);
     }
+
     /**
      * @Route(
      *      "/card/deck/draw/{number}",
      *       methods = {"POST","GET"}
      * )
      */
-
     public function cardDraw2(Request $request, SessionInterface $session, $number): Response
     {
         $c = $session->get('counter');
         $session->set('counter', $c + 1);
         if ($session->get('counter') == 1) {
-            //  var_dump($number);
             # code...
             $d = new \App\Deck\Deck();
             $d->createDeck();
@@ -151,7 +139,6 @@ class CardController extends AbstractController
                 // var_dump($deletedCards);
                 $session->set('cards', $t);
             }
-            // $countCardsLeft = count( $_SESSION["cards"]);
         }
         $r = $session->get('cards');
         $countCardsLeft = count($r);
@@ -162,7 +149,7 @@ class CardController extends AbstractController
             'onecard'       => $oneCard ?? $deletedCards
         ]);
     }
-
+    
     /**
         * @Route(
         *      "/card/deck/deal/{amountOfPlayers}/{amountOfCards}",
@@ -199,8 +186,8 @@ class CardController extends AbstractController
     }
 
     /**
-        * @Route("/card/deck2")
-        */
+    * @Route("/card/deck2")
+    */
     public function startDeck2(): Response
     {
         $title = "Alla Kort med 2 jokrar";
