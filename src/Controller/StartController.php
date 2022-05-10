@@ -51,4 +51,15 @@ class StartController extends AbstractController
             'title' => $title,
         ]);
     }
+
+     /**
+    * @Route("/metrics")
+    */
+    public function metrics(): Response
+    {
+        $title = "Metrics";
+        return $this->render('metrics/metrics.html.twig', [
+            'title' => $title,
+        ]);
+    }
 }

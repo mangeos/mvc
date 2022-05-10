@@ -2,7 +2,7 @@ imports:
     - php
 
 filter:
-    excluded_paths: [vendor/*, tests/*, tools/*, bin/*]
+    excluded_paths: [vendor/*, tests/*]
 
 build:
     nodes:
@@ -20,5 +20,5 @@ build:
                 # command: "composer phpunit"
                 command: "XDEBUG_MODE=coverage vendor/bin/phpunit"
                 coverage:
-                    file: "build/coverage.clover"
+                    file: "./build/coverage.clover"
                     format: "php-clover"

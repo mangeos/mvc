@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1652188920">
-  <project timestamp="1652188920">
+<coverage generated="1652207560">
+  <project timestamp="1652207560">
     <file name="C:\Users\Magnus\OneDrive\dbwebb-kurser\mvc\me\report\src\Card\Card.php">
       <class name="App\Card\Card" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
@@ -216,7 +216,7 @@
     </file>
     <file name="C:\Users\Magnus\OneDrive\dbwebb-kurser\mvc\me\report\src\Controller\StartController.php">
       <class name="App\Controller\StartController" namespace="global">
-        <metrics complexity="4" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="0" elements="12" coveredelements="0"/>
+        <metrics complexity="5" methods="5" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="0" elements="15" coveredelements="0"/>
       </class>
       <line num="14" type="method" name="present" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="16" type="stmt" count="0"/>
@@ -230,7 +230,10 @@
       <line num="47" type="method" name="gameCard" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="49" type="stmt" count="0"/>
       <line num="50" type="stmt" count="0"/>
-      <metrics loc="55" ncloc="43" classes="1" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="0" elements="12" coveredelements="0"/>
+      <line num="58" type="method" name="metrics" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="60" type="stmt" count="0"/>
+      <line num="61" type="stmt" count="0"/>
+      <metrics loc="66" ncloc="51" classes="1" methods="5" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="0" elements="15" coveredelements="0"/>
     </file>
     <file name="C:\Users\Magnus\OneDrive\dbwebb-kurser\mvc\me\report\src\Deck\Deck.php">
       <class name="App\Deck\Deck" namespace="global">
@@ -355,6 +358,6 @@
       <line num="46" type="stmt" count="0"/>
       <metrics loc="75" ncloc="36" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="0" elements="10" coveredelements="0"/>
     </file>
-    <metrics files="13" loc="889" ncloc="713" classes="12" methods="47" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="229" coveredstatements="16" elements="276" coveredelements="23"/>
+    <metrics files="13" loc="900" ncloc="721" classes="12" methods="48" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="231" coveredstatements="16" elements="279" coveredelements="23"/>
   </project>
 </coverage>
