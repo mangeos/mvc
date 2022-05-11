@@ -16,7 +16,7 @@ class BibliotekController extends AbstractController
      * @Route("/bibliotek", name="app_bibliotek"),
      * methods = {"GET"}
      */
-    public function index(Request $request): Response
+    public function index(): Response
     {
         $title = "Bibliotek";
         return $this->render('bibliotek/bibliotek.html.twig', [

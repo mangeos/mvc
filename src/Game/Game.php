@@ -7,7 +7,13 @@ class Game
     public $deck;
     public $dealer;
     public $player;
-
+     /**
+     * Constructor.
+     *
+     * @param object $deck
+     * @param object $dealer
+     * @param object $player
+     */
     public function __construct()
     {
         $this->deck = new \App\Deck\Deck();

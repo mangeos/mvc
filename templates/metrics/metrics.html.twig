@@ -29,16 +29,40 @@
                         <p><strong>Coverage: </strong>Det är endast 8% coverage så utvecklings potential finns helt klart. Dom tester jag har gjort var på klasserna App\Deck\Deck, App\Card\Card, App\Player\Player och där har jag 100% coverage.
                         För att få bättre mätvärden på coverage så behöver jag göra fler tester på mina andra klasser.
                         </p>
-                        <div style="font-size:13px"><img src="https://scrutinizer-ci.com/g/mangeos/mvc/badges/coverage.png?b=main" alt="Code Coverage"/></div>
                         <p><strong>Complexity: </strong>Jag har inga höga Complexity världen men om jag tar App\Controller\CardController som exempel så ger scrutinizer värdet 13. 
                         Då min kod inte är så komplex så tycker jag inte det är några problem för tillfället.</p>
-
-<p><strong>Cohesion: </strong></p>
-
+                        <p><strong>Cohesion: </strong>Jag får ett average LCOM på 0.92 vilket jag antar är lågt vilket visar styrkan i förhållandet mellan metoder och data för klasserna.</p>
+                        <p><strong>Coupling: </strong>App\Deck\Deck	är den klass som ger högst på Afferent coupling med ett värde på 4. Medans klassen App\Controller\CardController ger värdet 8 på Efferent coupling. Jag tolkar det som låga siffror och ser inga konstigheter.</p>
+                        <p><strong>Maintainability: </strong>Maintainability är ett mjukvarumått som mäter hur underhållbar ens kod är. Här finns utvecklings potential i flera av mina klasser, ett exempel kan vara i klassen Game där värdet ligger på 44.31. Ett sett att öka värdet skulle vara att lägga till kommentarer i min kod.  </p>
                     <h2>Scrutinizer</h2>
-                        <p></p>
+                     <p><strong>CRAP: </strong> Står för change risk anti pattern vilket betyder att den ger ett mätesvärde som jämför antalet tester med metodens komplexitet - högre är sämre.
+                        I klassen GameController har jag methoden game21 där visar scrutinizer ett högt värde 30. </p>
+                        <p><strong>Coverage: </strong>Det är endast 8% coverage så utvecklings potential finns helt klart. Dom tester jag har gjort var på klasserna App\Deck\Deck, App\Card\Card, App\Player\Player och där har jag 100% coverage.
+                        För att få bättre mätvärden på coverage så behöver jag göra fler tester på mina andra klasser.
+                        </p>
+                        <p><strong>Complexity: </strong>Jag har inga höga Complexity världen men om jag tar App\Controller\CardController som exempel så ger scrutinizer värdet 13. 
+                        Då min kod inte är så komplex så tycker jag inte det är några problem för tillfället.</p>
+                        <p><strong>Cohesion: </strong>Jag får ett average LCOM på 0.92 vilket jag antar är lågt vilket visar styrkan i förhållandet mellan metoder och data för klasserna.</p>
+                        <p><strong>Coupling: </strong>App\Deck\Deck	är den klass som ger högst på Afferent coupling med ett värde på 4. Medans klassen App\Controller\CardController ger värdet 8 på Efferent coupling. Jag tolkar det som låga siffror och ser inga konstigheter.</p>
+                        <p><strong>Maintainability: </strong>Maintainability är ett mjukvarumått som mäter hur underhållbar ens kod är. 
+                        Här finns utvecklings potential i flera av mina klasser, ett exempel kan vara i klassen Game där värdet ligger på 44.31. Ett sett att öka värdet skulle vara att lägga till kommentarer i min kod. </p></p>
+                        <div style="font-size:13px">
+                            <img src="https://scrutinizer-ci.com/g/mangeos/mvc/badges/quality-score.png?b=main" alt="Scrutinizer Code Quality"/>
+                            <img src="https://scrutinizer-ci.com/g/mangeos/mvc/badges/coverage.png?b=main" alt="Code Coverage"/>
+                            <img src="https://scrutinizer-ci.com/g/mangeos/mvc/badges/build.png?b=main" alt="Build Status"/>
+                            <img src="https://scrutinizer-ci.com/g/mangeos/mvc/badges/code-intelligence.svg?b=main" alt="Code Intelligence Status"/>
+                        </div>
                     <h2>Förbättringar</h2>
-                        <p></p>
+                        <p>1:Maintainability om jag i klassen Game kommenterar min kod bättre så borde värdet öka något som just nu står på 44.31. 
+                        Resultat efter: </p>
+                        <p>2:Coverage står just nu på 8%, om jag gör fler tester så kommer mätvärdet coverage öka. 
+                        Jag kommer att testa koden i klassen Game (som har ett värde på 0% just nu) vilket kommer att öka värdet på coverage.
+                        Resultat efter:
+                        </p>
+                        <p>3: I BibliotekController så finns ett Issues då jag har functionen index(Request $request) och använder aldrig request.
+                        Så jag tar bort requesten och förväntar mig ett bättre resultat.
+                            Resultat efter:</p>
+                            
                     <h2>Diskussion</h2>
                         <p></p>
                 </div>

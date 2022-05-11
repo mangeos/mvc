@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1652207560">
-  <project timestamp="1652207560">
+<coverage generated="1652310054">
+  <project timestamp="1652310054">
     <file name="C:\Users\Magnus\OneDrive\dbwebb-kurser\mvc\me\report\src\Card\Card.php">
       <class name="App\Card\Card" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
@@ -239,8 +239,8 @@
       <class name="App\Deck\Deck" namespace="global">
         <metrics complexity="5" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="11" coveredelements="11"/>
       </class>
-      <line num="12" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="2"/>
-      <line num="14" type="stmt" count="2"/>
+      <line num="12" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="7"/>
+      <line num="14" type="stmt" count="7"/>
       <line num="17" type="method" name="createDeck" visibility="public" complexity="3" crap="3" count="1"/>
       <line num="19" type="stmt" count="1"/>
       <line num="20" type="stmt" count="1"/>
@@ -291,36 +291,36 @@
     </file>
     <file name="C:\Users\Magnus\OneDrive\dbwebb-kurser\mvc\me\report\src\Game\Game.php">
       <class name="App\Game\Game" namespace="global">
-        <metrics complexity="12" methods="6" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="0" elements="27" coveredelements="0"/>
+        <metrics complexity="12" methods="6" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="5" elements="27" coveredelements="8"/>
       </class>
-      <line num="11" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="13" type="stmt" count="0"/>
-      <line num="14" type="stmt" count="0"/>
-      <line num="15" type="stmt" count="0"/>
-      <line num="18" type="method" name="create_deck_and_shuffle" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="21" type="stmt" count="0"/>
-      <line num="22" type="stmt" count="0"/>
-      <line num="25" type="method" name="take_one_card" visibility="public" complexity="4" crap="20" count="0"/>
+      <line num="17" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="5"/>
+      <line num="19" type="stmt" count="5"/>
+      <line num="20" type="stmt" count="5"/>
+      <line num="21" type="stmt" count="5"/>
+      <line num="24" type="method" name="create_deck_and_shuffle" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="27" type="stmt" count="0"/>
-      <line num="29" type="stmt" count="0"/>
-      <line num="31" type="stmt" count="0"/>
+      <line num="28" type="stmt" count="0"/>
+      <line num="31" type="method" name="take_one_card" visibility="public" complexity="4" crap="20" count="0"/>
       <line num="33" type="stmt" count="0"/>
-      <line num="34" type="stmt" count="0"/>
-      <line num="36" type="stmt" count="0"/>
+      <line num="35" type="stmt" count="0"/>
       <line num="37" type="stmt" count="0"/>
-      <line num="43" type="method" name="get_player" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="45" type="stmt" count="0"/>
-      <line num="48" type="method" name="get_dealer" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="50" type="stmt" count="0"/>
-      <line num="53" type="method" name="calculate_winner" visibility="public" complexity="4" crap="20" count="0"/>
-      <line num="55" type="stmt" count="0"/>
-      <line num="57" type="stmt" count="0"/>
-      <line num="58" type="stmt" count="0"/>
-      <line num="60" type="stmt" count="0"/>
+      <line num="39" type="stmt" count="0"/>
+      <line num="40" type="stmt" count="0"/>
+      <line num="42" type="stmt" count="0"/>
+      <line num="43" type="stmt" count="0"/>
+      <line num="49" type="method" name="get_player" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="51" type="stmt" count="1"/>
+      <line num="54" type="method" name="get_dealer" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="56" type="stmt" count="1"/>
+      <line num="59" type="method" name="calculate_winner" visibility="public" complexity="4" crap="20" count="0"/>
+      <line num="61" type="stmt" count="0"/>
       <line num="63" type="stmt" count="0"/>
-      <line num="65" type="stmt" count="0"/>
-      <line num="67" type="stmt" count="0"/>
-      <metrics loc="72" ncloc="64" classes="1" methods="6" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="0" elements="27" coveredelements="0"/>
+      <line num="64" type="stmt" count="0"/>
+      <line num="66" type="stmt" count="0"/>
+      <line num="69" type="stmt" count="0"/>
+      <line num="71" type="stmt" count="0"/>
+      <line num="73" type="stmt" count="0"/>
+      <metrics loc="78" ncloc="63" classes="1" methods="6" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="5" elements="27" coveredelements="8"/>
     </file>
     <file name="C:\Users\Magnus\OneDrive\dbwebb-kurser\mvc\me\report\src\Kernel.php">
       <class name="App\Kernel" namespace="global">
@@ -332,10 +332,10 @@
       <class name="App\Player\Player" namespace="global">
         <metrics complexity="3" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="8" coveredelements="8"/>
       </class>
-      <line num="16" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="2"/>
-      <line num="18" type="stmt" count="2"/>
-      <line num="19" type="stmt" count="2"/>
-      <line num="20" type="stmt" count="2"/>
+      <line num="16" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="7"/>
+      <line num="18" type="stmt" count="7"/>
+      <line num="19" type="stmt" count="7"/>
+      <line num="20" type="stmt" count="7"/>
       <line num="22" type="method" name="add_one_card" visibility="public" complexity="1" crap="1" count="1"/>
       <line num="24" type="stmt" count="1"/>
       <line num="27" type="method" name="add_points" visibility="public" complexity="1" crap="1" count="1"/>
@@ -358,6 +358,6 @@
       <line num="46" type="stmt" count="0"/>
       <metrics loc="75" ncloc="36" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="0" elements="10" coveredelements="0"/>
     </file>
-    <metrics files="13" loc="900" ncloc="721" classes="12" methods="48" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="231" coveredstatements="16" elements="279" coveredelements="23"/>
+    <metrics files="13" loc="906" ncloc="720" classes="12" methods="48" coveredmethods="10" conditionals="0" coveredconditionals="0" statements="231" coveredstatements="21" elements="279" coveredelements="31"/>
   </project>
 </coverage>
