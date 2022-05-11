@@ -18,9 +18,23 @@
 			<div class="container">	
                 <div style="display: flex; flex-direction: column">
                     <h2>Introduktion</h2>
-                        <p></p>
+                     <p><strong>Coverage: </strong>Testtäckning definieras som ett mått i Software Testing som mäter mängden tester som utförs av en uppsättning test. Det kommer att omfatta insamling av information om vilka delar av ett program som körs när testsviten körs för att avgöra vilka grenar av villkorliga uttalanden som har tagits. Enkelt uttryckt är det en teknik för att säkerställa att dina tester testar din kod eller hur mycket av din kod du tränade genom att köra testet.</p>
+                        <p><strong>Complexity: </strong>Cyklomatisk komplexitet är ett programvarumått som används för att indikera komplexiteten hos ett program. Det är ett kvantitativt mått på antalet linjärt oberoende vägar genom ett programs källkod. </p>
+                        <p><strong>Cohesion: </strong>är ett mått på styrkan i förhållandet mellan metoder och data för en klass och något förenande syfte eller koncept som tjänas av den klassen. 
+                        I en annan mening är det ett mått på styrkan i förhållandet mellan klassens metoder och data i sig. Cohesion är en ordinal typ av mätning och brukar beskrivas som "hög Cohesion" eller "låg Cohesion". Moduler med hög sammanhållning tenderar att vara att föredra, eftersom hög sammanhållning är förknippad med flera önskvärda egenskaper hos programvara, inklusive robusthet, tillförlitlighet, återanvändbarhet och förståelighet. Däremot är låg sammanhållning förknippad med oönskade egenskaper som att vara svåra att underhålla, testa, återanvända eller till och med förstå.</p>
+                        <p><strong>Coupling: </strong>Afferenta kopplingar (Ca): Antalet klasser i andra paket som beror på klasser i paketet är en indikator på paketets ansvar. Afferenta kopplingar signalerar inåt. 
+                                     Efferenta kopplingar (Ce): Antalet klasser i andra paket som klasserna i ett paket är beroende av är en indikator på paketets beroende av externa effekter. 
+                                     Efferenta kopplingar signalerar utåt. </p>
                     <h2>Phpmetrics</h2>
-                        <p></p>
+                        <p><strong>Coverage: </strong>Det är endast 8% coverage så utvecklings potential finns helt klart. Dom tester jag har gjort var på klasserna App\Deck\Deck, App\Card\Card, App\Player\Player och där har jag 100% coverage.
+                        För att få bättre mätvärden på coverage så behöver jag göra fler tester på mina andra klasser.
+                        </p>
+                        <div style="font-size:13px"><img src="https://scrutinizer-ci.com/g/mangeos/mvc/badges/coverage.png?b=main" alt="Code Coverage"/></div>
+                        <p><strong>Complexity: </strong>Jag har inga höga Complexity världen men om jag tar App\Controller\CardController som exempel så ger scrutinizer värdet 13. 
+                        Då min kod inte är så komplex så tycker jag inte det är några problem för tillfället.</p>
+
+<p><strong>Cohesion: </strong></p>
+
                     <h2>Scrutinizer</h2>
                         <p></p>
                     <h2>Förbättringar</h2>
