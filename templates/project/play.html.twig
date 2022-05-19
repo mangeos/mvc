@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            {% block title %}{% endblock %}
+        </title>
+        <link href={{ asset('./styles/app2.css') }} rel="stylesheet"/>
+        <linkrel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>"/>
+            {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        <script defer src="https://friconix.com/cdn/friconix.js"></script>
+	</head>
+<body>
+
+	<div class="header">
+		<h1>Poker Solitaire</h1>
+	</div>
+
+	<div class="topnav">
+		<a href={{ asset('./proj')}}>Start</a>
+		<a href={{ asset('./proj/play')}}>Spela Poker Solitaire</a>
+		<a href={{ asset('./proj/about')}} >Om</a>
+		<a href={{ asset('./proj/reset')}} >Återställ Databas</a>
+	</div>
+	<div class="row">
+		<div class="leftcolumn">
+			<div class="card">
+				<h2>Spela Poker Solitaire</h2>
+				<div class="fakeimg" style="height:600px;">
+					<h3>Regler</h3>
+					<p>Spelet börjar med att lägga ett kort på ett utrymme i ett 5x5 rutnät. Korten placeras ett i taget och när ett kort väl har placerats på rutnätet kan det inte längre flyttas. När alla 25 kort har delats ut, poängsätts på händerna på 5 kort som är bildade horisontellt i rader eller vertikalt i kolumner.[3] Antalet poäng beror på hierarkin av pokerhänder. Det finns två poängsystem: det engelska och det amerikanska poängsystemet. Det engelska systemet återspeglar svårigheten att få händerna i spelet; det amerikanska systemet återspeglar svårigheten att få händerna i faktisk poker. De två systemen betygsätter händernas poäng enligt följande:</p>
+						<table>
+							<tr>
+								<th>Poker Hand</th>
+								<th>American Point System</th>
+							</tr>
+							<tr>
+								<td>Royal flush</td>
+								<td>100</td>
+								
+							</tr>
+							<tr>
+								<td>Straight flush</td>
+								<td>75</td>
+								
+							</tr>
+							<tr>
+								<td>Four of a kind</td>
+								<td>50</td>
+								
+							</tr>
+							<tr>
+								<td>Full house</td>
+								<td>25</td>
+								
+							</tr>
+							<tr>
+								<td>Flush</td>
+								<td>20</td>
+								
+							</tr>
+							<tr>
+								<td>Straight</td>
+								<td>15</td>
+								
+							</tr>
+							<tr>
+								<td>Three of a kind</td>
+								<td>10</td>
+
+							</tr>
+							<tr>
+								<td>Two pairs</td>
+								<td>5</td>
+
+							</tr>
+							<tr>
+								<td>One pair</td>
+								<td>2</td>
+							</tr>
+						</table>
+					
+				</div>
+				
+			</div>
+		</div>
+		<div class="rightcolumn">
+			<div class="card">
+				<h2>Highscore</h2>
+				<div class="fakeimg" style="height:100px;">Image</div>
+				<p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+			</div>
+			
+		</div>
+			<div class="leftcolumn">
+			<div class="card">
+				<h2>Starta Spel</h2>
+				<div class="fakeimg">
+				<div class="form">
+					<form method="POST" action={{asset('./proj/playpoker')}}>
+						<label for="fname">Player Name</label>
+						<input required type="text" id="fname" name="fname" placeholder="Player Name..">
+						<input type="submit" value="Starta Spelet">
+
+					</form>
+				</div>
+
+				</div>
+				
+			</div>
+			
+		</div>
+	</div>
+
+	<div class="footer">
+		<h2>Footer</h2>
+	</div>
+
+</body>
+
+</html>

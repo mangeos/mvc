@@ -92,6 +92,7 @@
             "cache:clear": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd"
         },
+        "start":"php -S localhost:8888 -t public",
         "phpmetrics": "tools/phpmetrics/vendor/bin/phpmetrics --config=phpmetrics.json",
         "csfix": ["tools/php-cs-fixer/vendor/bin/php-cs-fixer fix src" , "tools/php-cs-fixer/vendor/bin/php-cs-fixer fix tests"],
         "phpcs": "tools/php-codesniffer/vendor/bin/phpcs --standard=PSR12 src",

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            {% block title %}{% endblock %}
+        </title>
+        <link href={{ asset('./styles/app2.css') }} rel="stylesheet"/>
+        <linkrel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>"/>
+            {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        <script defer src="https://friconix.com/cdn/friconix.js"></script>
+	</head>
+<body>
+
+	<div class="header">
+		<h1>Poker Solitaire</h1>
+	</div>
+
+	<div class="topnav">
+		<a href={{ asset('./proj')}}>Start</a>
+		<a href={{ asset('./proj/play')}}>Spela Poker Solitaire</a>
+		<a href={{ asset('./proj/about')}} >Om</a>
+		<a href={{ asset('./proj/reset')}} >Återställ Databas</a>
+	</div>
+
+	<div class="row">
+		<div class="leftcolumn">
+			<div class="card">
+				<h2>Spela Poker Solitaire</h2>
+				<h5>Title description, Maj 20, 2022</h5>
+				<div class="fakeimg" style="height:200px;">Image</div>
+				<p>Some text..</p>
+				<p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+			</div>
+			<div class="card">
+				<h2>Om Projektet</h2>
+				<h5>Title description, Maj 20, 2022</h5>
+				<div class="fakeimg" style="height:200px;">Image</div>
+				<p>Some text..</p>
+				<p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+			</div>
+		</div>
+		<div class="rightcolumn">
+			<div class="card">
+				<h2>Om</h2>
+				<div class="fakeimg" style="height:100px;">Image</div>
+				<p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+			</div>
+			
+		</div>
+	</div>
+
+	<div class="footer">
+		<h2>Footer</h2>
+	</div>
+
+</body>
+
+</html>
