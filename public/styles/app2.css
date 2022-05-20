@@ -66,9 +66,10 @@ body {
 
 /* Add a card effect for articles */
 .card {
-  background-color: white;
+  background-color: #2b7c2f;
   padding: 20px;
   margin-top: 20px;
+  border-radius: 10px;
 }
 
 /* Clear floats after the columns */
@@ -182,18 +183,17 @@ input[type=submit]:hover {
 
 
 .box {
-  background-color: lightgrey;
-  color: #fff;
-  border-radius: 5px;
-  padding: 20px;
-  font-size: 150%;
+  background-color: #FFF;
+  color: black;
+  border-radius: 3px;
+  font-size: 141%;
 }
 
 .wrapper {
   width: 600px;
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(5, 100px);
+  grid-template-columns: repeat(5, 80px);
   grid-template-rows: repeat(5, 100px);
   grid-auto-flow: column;
 }
