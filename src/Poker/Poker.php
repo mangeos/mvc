@@ -8,8 +8,8 @@ class Poker
     private $dealer;
     private $player;
 
-    private $vertical;
-    private $horisontal;
+    private $verticalCards;
+    private $horisontalCards;
      /**
      * Constructor.
      *
@@ -21,6 +21,9 @@ class Poker
     {
         $this->deck = new \App\Deck\Deck();
         $this->player = new \App\Player\Player($PlayerName, []);
+
+        $this->verticalCards = ["1" => [], "2" => [], "3" => [], "4" => [], "5" => []];
+        $this->horisontalCards = [1 => [], 2 => [], 3 => [], 4 => [], 5 => []];
     }
 
     public function create_deck_and_shuffle(): void
@@ -30,22 +33,25 @@ class Poker
         $this->deck->shuffle();
     }
 
-    public function take_one_card($playerOrDealer)
+    public function start_set_five_cards(): void
     {
-        foreach ($this->deck->cards[0] as $key => $value) {
+        $fiveCards = array_splice($this->deck->cards, 0, 5);
+        # push cards in to verticalcards at first element
+        //var_dump($fiveCards[0]);
+        # push cards in to horisontalcards, one card each
+        for ($i=0; $i < 5; $i++) { 
             # code...
-            if ($key == 'value') {
-                # code...
-                if ($playerOrDealer == $this->player->name) {
-                    # code...
-                    $this->player->add_points($value);
-                    $this->player->add_one_card(array_splice($this->deck->cards, 0, 1));
-                } else {
-                    $this->dealer->add_points($value);
-                    $this->dealer->add_one_card(array_splice($this->deck->cards, 0, 1));
-                }
-            }
+            $this->set_horisontalCards($fiveCards[$i], $i+1);
+            $this->set_verticalCards($fiveCards[$i], "1");
         }
+    }
+
+    public function take_one_card()
+    {
+        $oneCard = array_splice($this->deck->cards, 0, 1);
+        $this->player->add_one_card($oneCard);
+        return $oneCard;
+    
     }
 
     public function get_player()
@@ -53,7 +59,28 @@ class Poker
         return $this->player;
     }
 
-    public function calculate_winner()
+    public function set_verticalCards($verticalCard, $n)
+    {
+        array_push($this->verticalCards[$n], $verticalCard);
+    }
+
+    public function get_verticalCards() 
+    {
+        return $this->verticalCards;
+    }
+
+    public function set_horisontalCards($horisontalCard, $n)
+    {
+        array_push($this->horisontalCards[$n], $horisontalCard);
+    }
+
+    public function get_horisontalCards() 
+    {
+        return $this->horisontalCards;
+    }
+
+
+    public function calculate()
     {
         if ($this->player->points > 21) {
             # code...

@@ -50,17 +50,53 @@ class ProjectController extends AbstractController
      */
     public function PlayPoker(Request $request, SessionInterface $session): Response
     { 
+
         $title = "Presentation";
+        if ($request->request->get("fav_language")) {
+            # code...
+            $game = $session->get('Poker');
+           // var_dump($request->request->get("fav_language"));
+            $game->set_horisontalCards($session->get('oneCard')[0], $request->request->get("fav_language"));
+           // $game->set_horisontalCards($session->get('Poker'), $request->request->get("rad1"));
+            
+          //  $PlayerName = $game->get_player();
+          //$PlayerName = $PlayerName->$name;
+          
+            $oneCard = $game->take_one_card();
+            $session->set('oneCard', $oneCard);
+            $horisontal = $game->get_horisontalCards();
+            //var_dump($horisontal);
+           // var_dump( $game->get_verticalCards());
+              $session->set('Poker', $game);
+             return $this->render('project/playpoker.html.twig', [
+                
+                'title' => $title,
+                'horisontal' => $horisontal,
+                'oneCard' =>   $oneCard[0] 
+            ]);
+        }
         if ($request->request->get("fname")) {
             # code...
             $PlayerName = $request->request->get("fname");
             $game = New \App\Poker\Poker($PlayerName);
             $game->create_deck_and_shuffle();
-            print_r($game->get_player());
-
+           // print_r($game->get_player());
+            $game->start_set_five_cards();
+            $oneCard = $game->take_one_card();
+           //print_r($oneCard);
+            $session->set('oneCard', $oneCard);
+           //$game->get_verticalCards();
+           // $game->get_verticalCards();
+            $horisontal = $game->get_horisontalCards();
+            $session->set('Poker', $game);
+            //var_dump($verticalt);
+            var_dump($horisontal);
             return $this->render('project/playpoker.html.twig', [
-            'title' => $title,
-            'test' => $request->request->get('fname')
+               
+                'title' => $title,
+                'test' => $request->request->get('fname'),
+                'horisontal' => $horisontal,
+                'oneCard'=>   $oneCard[0] 
             ]);
         }
 
