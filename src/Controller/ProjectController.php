@@ -67,14 +67,19 @@ class ProjectController extends AbstractController
             $horisontal = $game->get_horisontalCards();
             //var_dump($horisontal);
            // var_dump( $game->get_verticalCards());
-            $game->calculate_horisentalt();
+            $pointsHorisental = $game->calculate_horisentalt();
+            $pointsVerticalt = $game->calculate_verticalt();
+          //  print_r( $pointsHorisental);
+            $game->calculate_verticalt();
             
               $session->set('Poker', $game);
              return $this->render('project/playpoker.html.twig', [
                 
                 'title' => $title,
                 'horisontal' => $horisontal,
-                'oneCard' =>   $oneCard[0] 
+                'oneCard' =>   $oneCard[0] ,
+                'pointsHorisental' =>  $pointsHorisental,
+                'pointsVertical'=> $pointsVerticalt
             ]);
         }
         if ($request->request->get("fname")) {
@@ -90,6 +95,8 @@ class ProjectController extends AbstractController
            //$game->get_verticalCards();
            // $game->get_verticalCards();
             $horisontal = $game->get_horisontalCards();
+            $pointsHorisental = $game->calculate_horisentalt();
+            $pointsVerticalt = $game->calculate_verticalt();
             $session->set('Poker', $game);
             //var_dump($verticalt);
         //    var_dump($horisontal);
@@ -98,7 +105,9 @@ class ProjectController extends AbstractController
                 'title' => $title,
                 'test' => $request->request->get('fname'),
                 'horisontal' => $horisontal,
-                'oneCard'=>   $oneCard[0] 
+                'oneCard'=>   $oneCard[0],
+                'pointsHorisental' =>  $pointsHorisental,
+                'pointsVertical'=> $pointsVerticalt
             ]);
         }
 

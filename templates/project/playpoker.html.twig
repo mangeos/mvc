@@ -101,6 +101,17 @@
 </form>
 
 				</div>
+<div class="pointsUnderCards">
+{% for i in pointsVertical %}
+	
+<div>{{i}}</div>
+
+
+{% endfor %}
+
+</div>
+
+
 		<hr>
 <div class="wrapper">
 	<div class="box">
@@ -139,7 +150,14 @@
 		<div class="rightcolumn">
 			<div class="card">
 				<h2>Highscore</h2>
-				<div class="fakeimg" style="height:100px;">Image</div>
+				<div class="fakeimg" style="height:100px;">
+{% for item in pointsHorisental %}
+{{item}}
+
+						
+					{% endfor %}
+
+				</div>
 				<p>Some text about me in culpa qui officia deserunt mollit anim..</p>
 			</div>
 			
