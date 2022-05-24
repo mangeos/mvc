@@ -67,6 +67,8 @@ class ProjectController extends AbstractController
             $horisontal = $game->get_horisontalCards();
             //var_dump($horisontal);
            // var_dump( $game->get_verticalCards());
+            $game->calculate_horisentalt();
+            
               $session->set('Poker', $game);
              return $this->render('project/playpoker.html.twig', [
                 
@@ -90,9 +92,9 @@ class ProjectController extends AbstractController
             $horisontal = $game->get_horisontalCards();
             $session->set('Poker', $game);
             //var_dump($verticalt);
-            var_dump($horisontal);
+        //    var_dump($horisontal);
             return $this->render('project/playpoker.html.twig', [
-               
+
                 'title' => $title,
                 'test' => $request->request->get('fname'),
                 'horisontal' => $horisontal,
