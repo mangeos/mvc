@@ -19,12 +19,12 @@ class Player
         $this->playerCards = $playerCards;
         $this->points = 0;
     }
-    public function add_one_card($oneCard)
+    public function addOneCard($oneCard)
     {
         array_push($this->playerCards, $oneCard);
     }
 
-    public function add_points(int $point)
+    public function addPoints(int $point)
     {
         $this->points += $point;
     }

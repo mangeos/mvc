@@ -8,18 +8,17 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
-
 class ProjectController extends AbstractController
 {
     /**
      * @Route("/proj")
      */
-    public function ProjectStart(): Response
+    public function projectStart(): Response
     {
         $url = "myfile.json";
         $json = file_get_contents($url);
-        $json = json_decode($json, TRUE);
-        
+        $json = json_decode($json, true);
+
         $title = "Presentation";
         return $this->render('project/base.html.twig', [
             'title' => $title,
@@ -29,9 +28,9 @@ class ProjectController extends AbstractController
 
     /**
      * @Route("/proj/play")
-     * 
+     *
      */
-    public function ProjPlay(): Response
+    public function projPlay(): Response
     {
         $url = "myfile.json";
         $json = file_get_contents($url);
@@ -45,7 +44,7 @@ class ProjectController extends AbstractController
     /**
      * @Route("/proj/about")
      */
-    public function ProjAbout(): Response
+    public function projAbout(): Response
     {
         $url = "myfile.json";
         $json = file_get_contents($url);
@@ -58,103 +57,79 @@ class ProjectController extends AbstractController
 
 
     /**
-     * @Route("/proj/databasen"),
-     * methods={"POST","GET"}
+     * @Route("/proj/reset"),
+     * methods={"GET"}
      */
-    public function databasen(Request $request): Response
+    public function reset(): Response
     {
 
-        return $this->redirectToRoute("app_project_projectstart");
+        return $this->redirectToRoute("highscore_delete");
     }
 
     /**
      * @Route("/proj/playpoker"),
      * methods={"POST"}
      */
-    public function PlayPoker(Request $request, SessionInterface $session): Response
-    { 
+    public function playPoker(Request $request, SessionInterface $session): Response
+    {
         $url = "myfile.json";
         $json = file_get_contents($url);
         $title = "Presentation";
 
-        
+
         if ($request->request->get("fav_language")) {
-            
             $game = $session->get('Poker');
 
-         
-            //    if (count($game->get_horisontalCards()) * count($game->get_verticalCards() == 25)) {
-                # code...
-                
-                
-                
-                //       return $this->render('project/playpoker.html.twig', [
-                    //         'title' => $title,
-                    //       'namn' => 'namn',
-                    //     'totalPoints' => $game->get_total_points()
-                    // ]);
-                    // }
-                    
-                    
-                    
-                    # code...
-                    // var_dump($request->request->get("fav_language"));
-                    $game->set_horisontalCards($session->get('oneCard')[0], $request->request->get("fav_language"));
-                    // $game->set_horisontalCards($session->get('Poker'), $request->request->get("rad1"));
-                    
-                    //  $PlayerName = $game->get_player();
-                    //$PlayerName = $PlayerName->$name;
-                    
-                    $oneCard = $game->take_one_card();
-                    $session->set('oneCard', $oneCard);
-                    $horisontal = $game->get_horisontalCards();
-                    //var_dump($horisontal);
-                    // var_dump( $game->get_verticalCards());
-            $pointsHorisental = $game->calculate_horisentalt();
-            $pointsVerticalt = $game->calculate_verticalt();
-            
-            //  print_r( $pointsHorisental);
-            $game->set_total_points($pointsHorisental, $pointsVerticalt);
-            
+            $game->setHorisontalCards($session->get('oneCard')[0], $request->request->get("fav_language"));
+
+            $oneCard = $game->takeOneCard();
+            $session->set('oneCard', $oneCard);
+            $horisontal = $game->getHorisontalCards();
+
+            $pointsHorisental = $game->calculateHorisentalt();
+            $pointsVerticalt = $game->calculateVerticalt();
+
+            $game->setTotalPoints($pointsHorisental, $pointsVerticalt);
+
             $session->set('Poker', $game);
 
-            if (count($game->get_horisontalCards()[1])+count($game->get_horisontalCards()[2])+count($game->get_horisontalCards()[3])+count($game->get_horisontalCards()[4])+count($game->get_horisontalCards()[5]) == 25) {
+            if (count($game->getHorisontalCards()[1]) + count($game->getHorisontalCards()[2]) + count($game->getHorisontalCards()[3]) + count($game->getHorisontalCards()[4]) + count($game->getHorisontalCards()[5]) == 25) {
                 # code...
                 return $this->render('project/savePoints.html.twig', [
-                    'name'        => $game->get_player()->name,
-                    'totalPoints' => $game->get_total_points(),
+                    'name'        => $game->getPlayer()->name,
+                    'totalPoints' => $game->getTotalPoints(),
                     'json' => $json
                 ]);
             }
 
              return $this->render('project/playpoker.html.twig', [
-                
+
                 'title' => $title,
                 'horisontal' => $horisontal,
                 'oneCard' =>   $oneCard[0] ,
                 'pointsHorisental' =>  $pointsHorisental,
-                'pointsVertical'=> $pointsVerticalt,
-                'totalPoints' => $game->get_total_points(),
+                'pointsVertical' => $pointsVerticalt,
+                'totalPoints' => $game->getTotalPoints(),
                 'json' => $json
 
-            ]);
+             ]);
         }
         if ($request->request->get("fname")) {
             # code...
             $PlayerName = $request->request->get("fname");
-            $game = New \App\Poker\Poker($PlayerName);
-            $game->create_deck_and_shuffle();
-           // print_r($game->get_player());
-            $game->start_set_five_cards();
-            $oneCard = $game->take_one_card();
+            $game = new \App\Poker\Poker($PlayerName);
+            $game->createDeckAndShuffle();
+           // print_r($game->getPlayer());
+            $game->startSetFiveCards();
+            $oneCard = $game->takeOneCard();
            //print_r($oneCard);
             $session->set('oneCard', $oneCard);
            //$game->get_verticalCards();
            // $game->get_verticalCards();
-            $horisontal = $game->get_horisontalCards();
-            $pointsHorisental = $game->calculate_horisentalt();
-            $pointsVerticalt = $game->calculate_verticalt();
-            $game->set_total_points($pointsHorisental, $pointsVerticalt);
+            $horisontal = $game->getHorisontalCards();
+            $pointsHorisental = $game->calculateHorisentalt();
+            $pointsVerticalt = $game->calculateVerticalt();
+            $game->setTotalPoints($pointsHorisental, $pointsVerticalt);
             $session->set('Poker', $game);
             //var_dump($verticalt);
         //    var_dump($horisontal);
@@ -163,13 +138,12 @@ class ProjectController extends AbstractController
                 'title' => $title,
                 'test' => $request->request->get('fname'),
                 'horisontal' => $horisontal,
-                'oneCard'=>   $oneCard[0],
+                'oneCard' =>   $oneCard[0],
                 'pointsHorisental' =>  $pointsHorisental,
-                'pointsVertical'=> $pointsVerticalt,
-                'totalPoints' => $game->get_total_points(),
+                'pointsVertical' => $pointsVerticalt,
+                'totalPoints' => $game->getTotalPoints(),
                 'json' => $json
             ]);
         }
     }
-
 }

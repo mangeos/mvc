@@ -24,7 +24,7 @@ class PlayerTest extends TestCase
         $TestArray = [];
 
         $Player = new Player($TestName, $TestArray);
-        $Player->add_one_card("oneCard");
+        $Player->addOneCard("oneCard");
 
         $this->assertEquals(count($Player->playerCards), 1);
     }
@@ -35,7 +35,7 @@ class PlayerTest extends TestCase
         $TestArray = [];
 
         $Player = new Player($TestName, $TestArray);
-        $Player->add_points(1);
+        $Player->addPoints(1);
 
         $this->assertEquals($Player->points, 1);
     }

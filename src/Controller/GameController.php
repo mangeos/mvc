@@ -48,20 +48,20 @@ class GameController extends AbstractController
 
 
 
-            while ($game21->get_dealer()->points < $game21->get_player()->points) {
+            while ($game21->getDealer()->points < $game21->getPlayer()->points) {
                 # code...
-                $game21->take_one_card("Dealer");
+                $game21->takeOneCard("Dealer");
             }
-            $calc = $game21->calculate_winner();
+            $calc = $game21->calculateWinner();
 
             $session->set('game', $game21);
         } elseif ($request->request->get('clear')) {
             # code...
             $session->clear();
             $game21 = new \App\Game\Game();
-            $game21->create_deck_and_shuffle();
+            $game21->createDeckAndShuffle();
 
-            $game21->take_one_card("Player");
+            $game21->takeOneCard("Player");
 
             $session->set('game', $game21);
         } else {
@@ -70,7 +70,7 @@ class GameController extends AbstractController
                 # code...
                 $game21 = $session->get('game');
 
-                $game21->take_one_card("Player");
+                $game21->takeOneCard("Player");
 
 
                 $session->set('game', $game21);
@@ -78,25 +78,25 @@ class GameController extends AbstractController
                 # code...
                 //create game21
                 $game21 = new \App\Game\Game();
-                $game21->create_deck_and_shuffle();
+                $game21->createDeckAndShuffle();
 
-                $game21->take_one_card("Player");
+                $game21->takeOneCard("Player");
 
                 $session->set('game', $game21);
             }
         }
-        # print_r($game21->get_player()->playerCards);
+        # print_r($game21->getPlayer()->playerCards);
         return $this->render('game/gameBoard.html.twig', [
                 'title'       => $title,
-                'playersHand' => $game21->get_player()->playerCards,
-                'playersName' => $game21->get_player()->name,
-                'playersPoints' => $game21->get_player()->points,
+                'playersHand' => $game21->getPlayer()->playerCards,
+                'playersName' => $game21->getPlayer()->name,
+                'playersPoints' => $game21->getPlayer()->points,
 
                 'calculateWinner' => $calc ?? "",
 
-                'dealersHand' => $game21->get_dealer()->playerCards ?? "",
-                'dealersName' => $game21->get_dealer()->name ?? "",
-                'dealersPoints' => $game21->get_dealer()->points ?? "",
+                'dealersHand' => $game21->getDealer()->playerCards ?? "",
+                'dealersName' => $game21->getDealer()->name ?? "",
+                'dealersPoints' => $game21->getDealer()->points ?? "",
             ]);
     }
 }

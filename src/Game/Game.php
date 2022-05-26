@@ -21,14 +21,14 @@ class Game
         $this->player = new \App\Player\Player("Player", []);
     }
 
-    public function create_deck_and_shuffle()
+    public function createDeckAndShuffle()
     {
         //create deck and shuffle
         $this->deck->createDeck();
         $this->deck->shuffle();
     }
 
-    public function take_one_card($playerOrDealer)
+    public function takeOneCard($playerOrDealer)
     {
         foreach ($this->deck->cards[0] as $key => $value) {
             # code...
@@ -36,27 +36,27 @@ class Game
                 # code...
                 if ($playerOrDealer == $this->player->name) {
                     # code...
-                    $this->player->add_points($value);
-                    $this->player->add_one_card(array_splice($this->deck->cards, 0, 1));
+                    $this->player->addPoints($value);
+                    $this->player->addOneCard(array_splice($this->deck->cards, 0, 1));
                 } else {
-                    $this->dealer->add_points($value);
-                    $this->dealer->add_one_card(array_splice($this->deck->cards, 0, 1));
+                    $this->dealer->addPoints($value);
+                    $this->dealer->addOneCard(array_splice($this->deck->cards, 0, 1));
                 }
             }
         }
     }
 
-    public function get_player()
+    public function getPlayer()
     {
         return $this->player;
     }
 
-    public function get_dealer()
+    public function getDealer()
     {
         return $this->dealer;
     }
 
-    public function calculate_winner()
+    public function calculateWinner()
     {
         if ($this->player->points > 21) {
             # code...

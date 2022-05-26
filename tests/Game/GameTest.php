@@ -36,12 +36,12 @@ class GameTest extends TestCase
         public function test_get_player()
     {
         $Game = new Game();
-        $this->assertIsObject($Game->get_player());
+        $this->assertIsObject($Game->getPlayer());
     }
 
     public function test_get_dealer()
     {
         $Game = new Game();
-        $this->assertIsObject($Game->get_dealer());
+        $this->assertIsObject($Game->getDealer());
     }
 }
