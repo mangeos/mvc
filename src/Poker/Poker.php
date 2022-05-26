@@ -11,6 +11,7 @@ class Poker
 
     private $verticalCards;
     private $horisontalCards;
+    private $totalPoints;
     //private $pointsHorisental;
      /**
      * Constructor.
@@ -28,7 +29,18 @@ class Poker
         $this->horisontalCards = [1 => [], 2 => [], 3 => [], 4 => [], 5 => []];
         $this->pointsHorisontal = [0,0,0,0,0];
         $this->pointsVertical = [0,0,0,0,0];
-        
+        $this->totalPoints = 0;
+    }
+    public function set_total_points(array $pointsH, array $pointsV){
+        $this->totalPoints = 0;
+        for ($i=0; $i < 5; $i++) { 
+            # code...
+            $this->totalPoints = $this->totalPoints + $pointsH[$i] + $pointsV[$i];
+        }
+    }
+
+    public function get_total_points(){
+        return $this->totalPoints;
     }
 
     public function create_deck_and_shuffle(): void
@@ -56,7 +68,6 @@ class Poker
         $oneCard = array_splice($this->deck->cards, 0, 1);
         $this->player->add_one_card($oneCard);
         return $oneCard;
-    
     }
 
     public function get_player()
@@ -83,12 +94,12 @@ class Poker
     {
         return $this->horisontalCards;
     }
-
+    
+ 
 
     public function calculate_horisentalt()
     {
-        $cards = $this->get_horisontalCards();
-        
+        $cards = $this->get_horisontalCards();  
         for ($i=1; $i < 6; $i++) { 
             foreach ($cards[$i] as $key => $value) {
                 $suitHand = [];
@@ -118,7 +129,6 @@ class Poker
                     
                     #kollar 2 par
                     $twoPairs = $this->two_pairs($valueHand);
-                    
                     #9. 1 par                  -- yes pairs_checker
                     if($pairsChecker == "2"){
                         $this->pointsHorisontal[$i-1] = 2;

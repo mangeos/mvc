@@ -26,8 +26,6 @@
 	<div class="row">
 		<div class="leftcolumn">
 			<div class="card">
-				<h2>Poker Solitaire</h2>
-				
 
 				<div class="wrapper">
 {% for e in 0..4 %}
@@ -74,17 +72,17 @@
 {% endfor %}
 
 
+{% for item in pointsHorisental %}
+<div style="padding-top: 40px; color: white;">{{item}}</div>
 
 
-				
-
-
-
+{% endfor %}
 <form  method="POST" action={{asset('./proj/playpoker')}}>
-
+<div>
 	<input required type="radio" id="rad1" name="fav_language" value="1">
 	<label for="rad1">rad1</label><br>
-	
+</div>
+
 	<input required type="radio" id="rad2" name="fav_language" value="2">
 	<label for="rad2">rad2</label><br>
 	
@@ -98,10 +96,20 @@
 	<label for="rad5">rad5</label>
 	
 	<input type="submit" value="submit">
+<div style="color: white;">
+
+	<p>
+<strong>Total Points:
+	{{totalPoints}}</strong>
+</p></div>
+
+
 </form>
 
 				</div>
-<div class="pointsUnderCards">
+<div class="pointsUnderCards" style="color: white;">
+
+
 {% for i in pointsVertical %}
 	
 <div>{{i}}</div>
@@ -118,8 +126,6 @@
 		{% if oneCard.suit == "&hearts;" %}
 			<p>{{oneCard.rank}}
 				&#10084;&#65039;</p>
-
-
 		{% endif %}
 
 		{% if oneCard.suit == "&diams;" %}
@@ -150,12 +156,60 @@
 		<div class="rightcolumn">
 			<div class="card">
 				<h2>Highscore</h2>
-				<div class="fakeimg" style="height:100px;">
-{% for item in pointsHorisental %}
-{{item}}
+				<div class="fakeimgb" >
+<table>
+	<tr>
+		<th>Id</th>
+		<th>Spelar Namn</th>
+		<th>Poäng</th>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>Mange123</td>
+		<td>200</td>
+	</tr>
+	<tr>
+		<td>Centro comercial Moctezuma</td>
+		<td>Francisco Chang</td>
+		<td>Mexico</td>
+	</tr>
+	<tr>
+		<td>Ernst Handel</td>
+		<td>Roland Mendel</td>
+		<td>Austria</td>
+	</tr>
+	<tr>
+		<td>Island Trading</td>
+		<td>Helen Bennett</td>
+		<td>UK</td>
+	</tr>
+	<tr>
+		<td>Königlich Essen</td>
+		<td>Philip Cramer</td>
+		<td>Germany</td>
+	</tr>
+	<tr>
+		<td>Laughing Bacchus Winecellars</td>
+		<td>Yoshi Tannamuri</td>
+		<td>Canada</td>
+	</tr>
+	<tr>
+		<td>Magazzini Alimentari Riuniti</td>
+		<td>Giovanni Rovelli</td>
+		<td>Italy</td>
+	</tr>
+	<tr>
+		<td>North/South</td>
+		<td>Simon Crowther</td>
+		<td>UK</td>
+	</tr>
+	<tr>
+		<td>Paris spécialités</td>
+		<td>Marie Bertrand</td>
+		<td>France</td>
+	</tr>
+</table>
 
-						
-					{% endfor %}
 
 				</div>
 				<p>Some text about me in culpa qui officia deserunt mollit anim..</p>
@@ -166,6 +220,7 @@
 
 	<div class="footer">
 		<h2>Footer</h2>
+			
 	</div>
 
 </body>

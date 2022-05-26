@@ -23,52 +23,39 @@
 		<a href={{ asset('./proj/reset')}} >Återställ Databas</a>
 		<a href={{ asset('./card/deck/shuffle') }}>card/deck/shuffle</a>
 	</div>
-
 	<div class="row">
 		<div class="leftcolumn">
 			<div class="card">
 				<h2>Spela Poker Solitaire</h2>
-				<h5>Title description, Maj 20, 2022</h5>
-				<div class="fakeimg" style="height:200px;">Image</div>
-				<p>Some text..</p>
-				<p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-			</div>
-			<div class="card">
-<h2>Highscore</h2>
-<div class="fakeimg" style="height:400px;">
-	<table>
-		<tr>
-			<th>Spelar Namn</th>
-			<th>Poäng</th>
-		</tr>
-		{% for item in json %}
+				<div class="fakeimg" style="height:600px;">
+					<h3>Totalpoäng</h3>
+<form method="POST" action={{asset('./highscore/create')}}>
 
-			<tr>
-				<td>{{item.playername}}</td>
-				<td>{{item.points}}</td>
-			</tr>
-		{% endfor %}
+<label for="totalPoints">Total Points</label>
 
-	</table>
+<input type="text" id="totalPoints" name="totalPoints" readonly value="{{totalPoints}}">
+<label for="playerName">Databasen</label>
 
-</div>
+<input type="text" id="playerName" name="playerName" readonly value="{{name}}">
 
+	<input type="submit" value="Databasen">
+
+</form>
+				</div>
 			</div>
 		</div>
 		<div class="rightcolumn">
 			<div class="card">
-				<h2>Om</h2>
+				<h2>Highscore</h2>
 				<div class="fakeimg" style="height:100px;">Image</div>
 				<p>Some text about me in culpa qui officia deserunt mollit anim..</p>
 			</div>
-			
 		</div>
-	</div>
+		</div>
 
 	<div class="footer">
 		<h2>Footer</h2>
 	</div>
 
 </body>
-
 </html>

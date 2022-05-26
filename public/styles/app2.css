@@ -1,10 +1,11 @@
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {
   font-family: Arial;
-  padding: 10px;
+  padding: 20px;
   background: #f1f1f1;
 }
 
@@ -12,11 +13,12 @@ body {
 .header {
   padding: 30px;
   text-align: center;
-  background: white;
+  background: #040404;
 }
 
 .header h1 {
   font-size: 50px;
+  color: #d5d5d5;
 }
 
 /* Style the top navigation bar */
@@ -66,10 +68,11 @@ body {
 
 /* Add a card effect for articles */
 .card {
-  background-color: #2b7c2f;
+  background-color: #053207;
   padding: 20px;
   margin-top: 20px;
   border-radius: 10px;
+  color: #d5d5d5;
 }
 
 /* Clear floats after the columns */
@@ -83,8 +86,9 @@ body {
 .footer {
   padding: 20px;
   text-align: center;
-  background: #ddd;
+  background: #040404;
   margin-top: 20px;
+  color: #d5d5d5;
 }
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
@@ -190,16 +194,24 @@ input[type=submit]:hover {
 }
 
 .wrapper {
-  width: 600px;
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(5, 80px);
-  grid-template-rows: repeat(5, 100px);
+  grid-template-columns: repeat(5, 66px);
+  grid-template-rows: repeat(5, 92px);
   grid-auto-flow: column;
 }
 
 .pointsUnderCards {
   display: flex;
-  gap: 80px;
-  padding-left: 40px;
+  gap: 68px;
+  padding-left: 27px;
+  padding-top: 10px;
+}
+
+.fakeimgb{
+      background-color: #aaa;
+        width: 100%;
+        position: relative;
+        padding: 20px;
+        height: 650px;
 }
