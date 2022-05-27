@@ -64,6 +64,8 @@ body {
   width: 100%;
   position: relative;
   padding: 20px;
+  color: black;
+  overflow: scroll;
 }
 
 /* Add a card effect for articles */
@@ -112,13 +114,9 @@ body {
   }
 }
 
-
 table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
+  background-color: #136017;
+  color: black;
 }
 
 td,
