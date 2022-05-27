@@ -48,7 +48,7 @@ class ProjectController extends AbstractController
     {
         $url = "myfile.json";
         $json = file_get_contents($url);
-        $title = "Presentation";
+        $title = "About";
         return $this->render('project/about.html.twig', [
             'title' => $title,
             'json' => $json

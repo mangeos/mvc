@@ -5,13 +5,14 @@ namespace App\Poker;
 class Poker
 {
     private $deck;
-    private $dealer;
     private $player;
-    private $points;
 
     private $verticalCards;
     private $horisontalCards;
     private $totalPoints;
+
+    public $pointsHorisontal;
+    public $pointsVertical;
     //private $pointsHorisental;
      /**
      * Constructor.
@@ -170,9 +171,6 @@ class Poker
                     if ($royalFlush == "ROYAL FLUSH") {
                         $this->pointsHorisontal[$i - 1] = 100;
                     }
-                
-                # hand row1
-             
             }
         }
         return $this->pointsHorisontal;

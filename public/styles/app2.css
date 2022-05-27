@@ -60,7 +60,7 @@ body {
 
 /* Fake image */
 .fakeimg {
-  background-color: #aaa;
+  background-color: #f1f1f1;
   width: 100%;
   position: relative;
   padding: 20px;
@@ -84,11 +84,14 @@ body {
 
 /* Footer */
 .footer {
-  padding: 20px;
-  text-align: center;
-  background: #040404;
-  margin-top: 20px;
-  color: #d5d5d5;
+  display: flex;
+    padding: 20px;
+    text-align: center;
+    background: #040404;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    color: #d5d5d5;
 }
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
