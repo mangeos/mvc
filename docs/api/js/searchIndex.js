@@ -26,6 +26,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Card-Card.html#property_value"
         },                {
+            "fqsen": "\\App\\Card\\Card\u003A\u003A\u0024pokerValue",
+            "name": "pokerValue",
+            "summary": "",
+            "url": "classes/App-Card-Card.html#property_pokerValue"
+        },                {
             "fqsen": "\\App\\Controller\\CardController",
             "name": "CardController",
             "summary": "",
@@ -121,6 +126,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Controller-StartController.html#method_gameCard"
         },                {
+            "fqsen": "\\App\\Controller\\StartController\u003A\u003Ametrics\u0028\u0029",
+            "name": "metrics",
+            "summary": "",
+            "url": "classes/App-Controller-StartController.html#method_metrics"
+        },                {
             "fqsen": "\\App\\Deck\\Deck",
             "name": "Deck",
             "summary": "",
@@ -163,33 +173,33 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Game\\Game\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "",
+            "summary": "Constructor.",
             "url": "classes/App-Game-Game.html#method___construct"
         },                {
-            "fqsen": "\\App\\Game\\Game\u003A\u003Acreate_deck_and_shuffle\u0028\u0029",
-            "name": "create_deck_and_shuffle",
+            "fqsen": "\\App\\Game\\Game\u003A\u003AcreateDeckAndShuffle\u0028\u0029",
+            "name": "createDeckAndShuffle",
             "summary": "",
-            "url": "classes/App-Game-Game.html#method_create_deck_and_shuffle"
+            "url": "classes/App-Game-Game.html#method_createDeckAndShuffle"
         },                {
-            "fqsen": "\\App\\Game\\Game\u003A\u003Atake_one_card\u0028\u0029",
-            "name": "take_one_card",
+            "fqsen": "\\App\\Game\\Game\u003A\u003AtakeOneCard\u0028\u0029",
+            "name": "takeOneCard",
             "summary": "",
-            "url": "classes/App-Game-Game.html#method_take_one_card"
+            "url": "classes/App-Game-Game.html#method_takeOneCard"
         },                {
-            "fqsen": "\\App\\Game\\Game\u003A\u003Aget_player\u0028\u0029",
-            "name": "get_player",
+            "fqsen": "\\App\\Game\\Game\u003A\u003AgetPlayer\u0028\u0029",
+            "name": "getPlayer",
             "summary": "",
-            "url": "classes/App-Game-Game.html#method_get_player"
+            "url": "classes/App-Game-Game.html#method_getPlayer"
         },                {
-            "fqsen": "\\App\\Game\\Game\u003A\u003Aget_dealer\u0028\u0029",
-            "name": "get_dealer",
+            "fqsen": "\\App\\Game\\Game\u003A\u003AgetDealer\u0028\u0029",
+            "name": "getDealer",
             "summary": "",
-            "url": "classes/App-Game-Game.html#method_get_dealer"
+            "url": "classes/App-Game-Game.html#method_getDealer"
         },                {
-            "fqsen": "\\App\\Game\\Game\u003A\u003Acalculate_winner\u0028\u0029",
-            "name": "calculate_winner",
+            "fqsen": "\\App\\Game\\Game\u003A\u003AcalculateWinner\u0028\u0029",
+            "name": "calculateWinner",
             "summary": "",
-            "url": "classes/App-Game-Game.html#method_calculate_winner"
+            "url": "classes/App-Game-Game.html#method_calculateWinner"
         },                {
             "fqsen": "\\App\\Game\\Game\u003A\u003A\u0024deck",
             "name": "deck",
@@ -221,15 +231,15 @@ Search.appendIndex(
             "summary": "Constructor\u0020to\u0020create\u0020a\u0020Card.",
             "url": "classes/App-Player-Player.html#method___construct"
         },                {
-            "fqsen": "\\App\\Player\\Player\u003A\u003Aadd_one_card\u0028\u0029",
-            "name": "add_one_card",
+            "fqsen": "\\App\\Player\\Player\u003A\u003AaddOneCard\u0028\u0029",
+            "name": "addOneCard",
             "summary": "",
-            "url": "classes/App-Player-Player.html#method_add_one_card"
+            "url": "classes/App-Player-Player.html#method_addOneCard"
         },                {
-            "fqsen": "\\App\\Player\\Player\u003A\u003Aadd_points\u0028\u0029",
-            "name": "add_points",
+            "fqsen": "\\App\\Player\\Player\u003A\u003AaddPoints\u0028\u0029",
+            "name": "addPoints",
             "summary": "",
-            "url": "classes/App-Player-Player.html#method_add_points"
+            "url": "classes/App-Player-Player.html#method_addPoints"
         },                {
             "fqsen": "\\App\\Player\\Player\u003A\u003A\u0024name",
             "name": "name",
@@ -240,6 +250,396 @@ Search.appendIndex(
             "name": "playerCards",
             "summary": "",
             "url": "classes/App-Player-Player.html#property_playerCards"
+        },                {
+            "fqsen": "\\App\\Controller\\BibliotekController",
+            "name": "BibliotekController",
+            "summary": "",
+            "url": "classes/App-Controller-BibliotekController.html"
+        },                {
+            "fqsen": "\\App\\Controller\\BibliotekController\u003A\u003Aindex\u0028\u0029",
+            "name": "index",
+            "summary": "",
+            "url": "classes/App-Controller-BibliotekController.html#method_index"
+        },                {
+            "fqsen": "\\App\\Controller\\BibliotekController\u003A\u003Acreatebibliotek\u0028\u0029",
+            "name": "createbibliotek",
+            "summary": "",
+            "url": "classes/App-Controller-BibliotekController.html#method_createbibliotek"
+        },                {
+            "fqsen": "\\App\\Controller\\BibliotekController\u003A\u003AshowBibliotekById\u0028\u0029",
+            "name": "showBibliotekById",
+            "summary": "",
+            "url": "classes/App-Controller-BibliotekController.html#method_showBibliotekById"
+        },                {
+            "fqsen": "\\App\\Controller\\BibliotekController\u003A\u003AshowAllBibliotek\u0028\u0029",
+            "name": "showAllBibliotek",
+            "summary": "",
+            "url": "classes/App-Controller-BibliotekController.html#method_showAllBibliotek"
+        },                {
+            "fqsen": "\\App\\Controller\\BibliotekController\u003A\u003AdeleteBibliotekById\u0028\u0029",
+            "name": "deleteBibliotekById",
+            "summary": "",
+            "url": "classes/App-Controller-BibliotekController.html#method_deleteBibliotekById"
+        },                {
+            "fqsen": "\\App\\Controller\\BibliotekController\u003A\u003AupdateBibliotek\u0028\u0029",
+            "name": "updateBibliotek",
+            "summary": "",
+            "url": "classes/App-Controller-BibliotekController.html#method_updateBibliotek"
+        },                {
+            "fqsen": "\\App\\Controller\\HighscoreController",
+            "name": "HighscoreController",
+            "summary": "",
+            "url": "classes/App-Controller-HighscoreController.html"
+        },                {
+            "fqsen": "\\App\\Controller\\HighscoreController\u003A\u003Aindex\u0028\u0029",
+            "name": "index",
+            "summary": "",
+            "url": "classes/App-Controller-HighscoreController.html#method_index"
+        },                {
+            "fqsen": "\\App\\Controller\\HighscoreController\u003A\u003Acreatehighscore\u0028\u0029",
+            "name": "createhighscore",
+            "summary": "",
+            "url": "classes/App-Controller-HighscoreController.html#method_createhighscore"
+        },                {
+            "fqsen": "\\App\\Controller\\HighscoreController\u003A\u003AshowAllHighscores\u0028\u0029",
+            "name": "showAllHighscores",
+            "summary": "",
+            "url": "classes/App-Controller-HighscoreController.html#method_showAllHighscores"
+        },                {
+            "fqsen": "\\App\\Controller\\HighscoreController\u003A\u003AdeleteAll\u0028\u0029",
+            "name": "deleteAll",
+            "summary": "",
+            "url": "classes/App-Controller-HighscoreController.html#method_deleteAll"
+        },                {
+            "fqsen": "\\App\\Controller\\ProjectController",
+            "name": "ProjectController",
+            "summary": "",
+            "url": "classes/App-Controller-ProjectController.html"
+        },                {
+            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003AprojectStart\u0028\u0029",
+            "name": "projectStart",
+            "summary": "",
+            "url": "classes/App-Controller-ProjectController.html#method_projectStart"
+        },                {
+            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003AprojPlay\u0028\u0029",
+            "name": "projPlay",
+            "summary": "",
+            "url": "classes/App-Controller-ProjectController.html#method_projPlay"
+        },                {
+            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003AprojAbout\u0028\u0029",
+            "name": "projAbout",
+            "summary": "",
+            "url": "classes/App-Controller-ProjectController.html#method_projAbout"
+        },                {
+            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003Areset\u0028\u0029",
+            "name": "reset",
+            "summary": "",
+            "url": "classes/App-Controller-ProjectController.html#method_reset"
+        },                {
+            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003AplayPoker\u0028\u0029",
+            "name": "playPoker",
+            "summary": "",
+            "url": "classes/App-Controller-ProjectController.html#method_playPoker"
+        },                {
+            "fqsen": "\\App\\Entity\\Bibliotek",
+            "name": "Bibliotek",
+            "summary": "",
+            "url": "classes/App-Entity-Bibliotek.html"
+        },                {
+            "fqsen": "\\App\\Entity\\Bibliotek\u003A\u003AgetId\u0028\u0029",
+            "name": "getId",
+            "summary": "",
+            "url": "classes/App-Entity-Bibliotek.html#method_getId"
+        },                {
+            "fqsen": "\\App\\Entity\\Bibliotek\u003A\u003AgetTitel\u0028\u0029",
+            "name": "getTitel",
+            "summary": "",
+            "url": "classes/App-Entity-Bibliotek.html#method_getTitel"
+        },                {
+            "fqsen": "\\App\\Entity\\Bibliotek\u003A\u003AsetTitel\u0028\u0029",
+            "name": "setTitel",
+            "summary": "",
+            "url": "classes/App-Entity-Bibliotek.html#method_setTitel"
+        },                {
+            "fqsen": "\\App\\Entity\\Bibliotek\u003A\u003AgetISBN\u0028\u0029",
+            "name": "getISBN",
+            "summary": "",
+            "url": "classes/App-Entity-Bibliotek.html#method_getISBN"
+        },                {
+            "fqsen": "\\App\\Entity\\Bibliotek\u003A\u003AsetISBN\u0028\u0029",
+            "name": "setISBN",
+            "summary": "",
+            "url": "classes/App-Entity-Bibliotek.html#method_setISBN"
+        },                {
+            "fqsen": "\\App\\Entity\\Bibliotek\u003A\u003AgetF\u00F6rfattare\u0028\u0029",
+            "name": "getF\u00F6rfattare",
+            "summary": "",
+            "url": "classes/App-Entity-Bibliotek.html#method_getF%C3%B6rfattare"
+        },                {
+            "fqsen": "\\App\\Entity\\Bibliotek\u003A\u003AsetF\u00F6rfattare\u0028\u0029",
+            "name": "setF\u00F6rfattare",
+            "summary": "",
+            "url": "classes/App-Entity-Bibliotek.html#method_setF%C3%B6rfattare"
+        },                {
+            "fqsen": "\\App\\Entity\\Bibliotek\u003A\u003AgetBild\u0028\u0029",
+            "name": "getBild",
+            "summary": "",
+            "url": "classes/App-Entity-Bibliotek.html#method_getBild"
+        },                {
+            "fqsen": "\\App\\Entity\\Bibliotek\u003A\u003AsetBild\u0028\u0029",
+            "name": "setBild",
+            "summary": "",
+            "url": "classes/App-Entity-Bibliotek.html#method_setBild"
+        },                {
+            "fqsen": "\\App\\Entity\\Bibliotek\u003A\u003A\u0024id",
+            "name": "id",
+            "summary": "",
+            "url": "classes/App-Entity-Bibliotek.html#property_id"
+        },                {
+            "fqsen": "\\App\\Entity\\Bibliotek\u003A\u003A\u0024titel",
+            "name": "titel",
+            "summary": "",
+            "url": "classes/App-Entity-Bibliotek.html#property_titel"
+        },                {
+            "fqsen": "\\App\\Entity\\Bibliotek\u003A\u003A\u0024ISBN",
+            "name": "ISBN",
+            "summary": "",
+            "url": "classes/App-Entity-Bibliotek.html#property_ISBN"
+        },                {
+            "fqsen": "\\App\\Entity\\Bibliotek\u003A\u003A\u0024f\u00F6rfattare",
+            "name": "f\u00F6rfattare",
+            "summary": "",
+            "url": "classes/App-Entity-Bibliotek.html#property_f%C3%B6rfattare"
+        },                {
+            "fqsen": "\\App\\Entity\\Bibliotek\u003A\u003A\u0024bild",
+            "name": "bild",
+            "summary": "",
+            "url": "classes/App-Entity-Bibliotek.html#property_bild"
+        },                {
+            "fqsen": "\\App\\Entity\\Highscore",
+            "name": "Highscore",
+            "summary": "",
+            "url": "classes/App-Entity-Highscore.html"
+        },                {
+            "fqsen": "\\App\\Entity\\Highscore\u003A\u003AgetId\u0028\u0029",
+            "name": "getId",
+            "summary": "",
+            "url": "classes/App-Entity-Highscore.html#method_getId"
+        },                {
+            "fqsen": "\\App\\Entity\\Highscore\u003A\u003AgetPlayername\u0028\u0029",
+            "name": "getPlayername",
+            "summary": "",
+            "url": "classes/App-Entity-Highscore.html#method_getPlayername"
+        },                {
+            "fqsen": "\\App\\Entity\\Highscore\u003A\u003AsetPlayername\u0028\u0029",
+            "name": "setPlayername",
+            "summary": "",
+            "url": "classes/App-Entity-Highscore.html#method_setPlayername"
+        },                {
+            "fqsen": "\\App\\Entity\\Highscore\u003A\u003AgetPoints\u0028\u0029",
+            "name": "getPoints",
+            "summary": "",
+            "url": "classes/App-Entity-Highscore.html#method_getPoints"
+        },                {
+            "fqsen": "\\App\\Entity\\Highscore\u003A\u003AsetPoints\u0028\u0029",
+            "name": "setPoints",
+            "summary": "",
+            "url": "classes/App-Entity-Highscore.html#method_setPoints"
+        },                {
+            "fqsen": "\\App\\Entity\\Highscore\u003A\u003A\u0024id",
+            "name": "id",
+            "summary": "",
+            "url": "classes/App-Entity-Highscore.html#property_id"
+        },                {
+            "fqsen": "\\App\\Entity\\Highscore\u003A\u003A\u0024playername",
+            "name": "playername",
+            "summary": "",
+            "url": "classes/App-Entity-Highscore.html#property_playername"
+        },                {
+            "fqsen": "\\App\\Entity\\Highscore\u003A\u003A\u0024points",
+            "name": "points",
+            "summary": "",
+            "url": "classes/App-Entity-Highscore.html#property_points"
+        },                {
+            "fqsen": "\\App\\Poker\\Poker",
+            "name": "Poker",
+            "summary": "",
+            "url": "classes/App-Poker-Poker.html"
+        },                {
+            "fqsen": "\\App\\Poker\\Poker\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Constructor.",
+            "url": "classes/App-Poker-Poker.html#method___construct"
+        },                {
+            "fqsen": "\\App\\Poker\\Poker\u003A\u003AsetTotalPoints\u0028\u0029",
+            "name": "setTotalPoints",
+            "summary": "",
+            "url": "classes/App-Poker-Poker.html#method_setTotalPoints"
+        },                {
+            "fqsen": "\\App\\Poker\\Poker\u003A\u003AgetTotalPoints\u0028\u0029",
+            "name": "getTotalPoints",
+            "summary": "",
+            "url": "classes/App-Poker-Poker.html#method_getTotalPoints"
+        },                {
+            "fqsen": "\\App\\Poker\\Poker\u003A\u003AcreateDeckAndShuffle\u0028\u0029",
+            "name": "createDeckAndShuffle",
+            "summary": "",
+            "url": "classes/App-Poker-Poker.html#method_createDeckAndShuffle"
+        },                {
+            "fqsen": "\\App\\Poker\\Poker\u003A\u003AstartSetFiveCards\u0028\u0029",
+            "name": "startSetFiveCards",
+            "summary": "",
+            "url": "classes/App-Poker-Poker.html#method_startSetFiveCards"
+        },                {
+            "fqsen": "\\App\\Poker\\Poker\u003A\u003AtakeOneCard\u0028\u0029",
+            "name": "takeOneCard",
+            "summary": "",
+            "url": "classes/App-Poker-Poker.html#method_takeOneCard"
+        },                {
+            "fqsen": "\\App\\Poker\\Poker\u003A\u003AgetPlayer\u0028\u0029",
+            "name": "getPlayer",
+            "summary": "",
+            "url": "classes/App-Poker-Poker.html#method_getPlayer"
+        },                {
+            "fqsen": "\\App\\Poker\\Poker\u003A\u003AsetVerticalCards\u0028\u0029",
+            "name": "setVerticalCards",
+            "summary": "",
+            "url": "classes/App-Poker-Poker.html#method_setVerticalCards"
+        },                {
+            "fqsen": "\\App\\Poker\\Poker\u003A\u003AgetVerticalCards\u0028\u0029",
+            "name": "getVerticalCards",
+            "summary": "",
+            "url": "classes/App-Poker-Poker.html#method_getVerticalCards"
+        },                {
+            "fqsen": "\\App\\Poker\\Poker\u003A\u003AsetHorisontalCards\u0028\u0029",
+            "name": "setHorisontalCards",
+            "summary": "",
+            "url": "classes/App-Poker-Poker.html#method_setHorisontalCards"
+        },                {
+            "fqsen": "\\App\\Poker\\Poker\u003A\u003AgetHorisontalCards\u0028\u0029",
+            "name": "getHorisontalCards",
+            "summary": "",
+            "url": "classes/App-Poker-Poker.html#method_getHorisontalCards"
+        },                {
+            "fqsen": "\\App\\Poker\\Poker\u003A\u003AcalculateHorisentalt\u0028\u0029",
+            "name": "calculateHorisentalt",
+            "summary": "",
+            "url": "classes/App-Poker-Poker.html#method_calculateHorisentalt"
+        },                {
+            "fqsen": "\\App\\Poker\\Poker\u003A\u003AroyalFlushOrStraightFlushChecker\u0028\u0029",
+            "name": "royalFlushOrStraightFlushChecker",
+            "summary": "",
+            "url": "classes/App-Poker-Poker.html#method_royalFlushOrStraightFlushChecker"
+        },                {
+            "fqsen": "\\App\\Poker\\Poker\u003A\u003ApairsChecker\u0028\u0029",
+            "name": "pairsChecker",
+            "summary": "",
+            "url": "classes/App-Poker-Poker.html#method_pairsChecker"
+        },                {
+            "fqsen": "\\App\\Poker\\Poker\u003A\u003AfullHouse\u0028\u0029",
+            "name": "fullHouse",
+            "summary": "",
+            "url": "classes/App-Poker-Poker.html#method_fullHouse"
+        },                {
+            "fqsen": "\\App\\Poker\\Poker\u003A\u003AcheckThree\u0028\u0029",
+            "name": "checkThree",
+            "summary": "",
+            "url": "classes/App-Poker-Poker.html#method_checkThree"
+        },                {
+            "fqsen": "\\App\\Poker\\Poker\u003A\u003AtwoPairs\u0028\u0029",
+            "name": "twoPairs",
+            "summary": "",
+            "url": "classes/App-Poker-Poker.html#method_twoPairs"
+        },                {
+            "fqsen": "\\App\\Poker\\Poker\u003A\u003AflushChecker\u0028\u0029",
+            "name": "flushChecker",
+            "summary": "",
+            "url": "classes/App-Poker-Poker.html#method_flushChecker"
+        },                {
+            "fqsen": "\\App\\Poker\\Poker\u003A\u003AstraightChecker\u0028\u0029",
+            "name": "straightChecker",
+            "summary": "",
+            "url": "classes/App-Poker-Poker.html#method_straightChecker"
+        },                {
+            "fqsen": "\\App\\Poker\\Poker\u003A\u003AcalculateVerticalt\u0028\u0029",
+            "name": "calculateVerticalt",
+            "summary": "",
+            "url": "classes/App-Poker-Poker.html#method_calculateVerticalt"
+        },                {
+            "fqsen": "\\App\\Poker\\Poker\u003A\u003A\u0024deck",
+            "name": "deck",
+            "summary": "",
+            "url": "classes/App-Poker-Poker.html#property_deck"
+        },                {
+            "fqsen": "\\App\\Poker\\Poker\u003A\u003A\u0024player",
+            "name": "player",
+            "summary": "",
+            "url": "classes/App-Poker-Poker.html#property_player"
+        },                {
+            "fqsen": "\\App\\Poker\\Poker\u003A\u003A\u0024verticalCards",
+            "name": "verticalCards",
+            "summary": "",
+            "url": "classes/App-Poker-Poker.html#property_verticalCards"
+        },                {
+            "fqsen": "\\App\\Poker\\Poker\u003A\u003A\u0024horisontalCards",
+            "name": "horisontalCards",
+            "summary": "",
+            "url": "classes/App-Poker-Poker.html#property_horisontalCards"
+        },                {
+            "fqsen": "\\App\\Poker\\Poker\u003A\u003A\u0024totalPoints",
+            "name": "totalPoints",
+            "summary": "",
+            "url": "classes/App-Poker-Poker.html#property_totalPoints"
+        },                {
+            "fqsen": "\\App\\Poker\\Poker\u003A\u003A\u0024pointsHorisontal",
+            "name": "pointsHorisontal",
+            "summary": "",
+            "url": "classes/App-Poker-Poker.html#property_pointsHorisontal"
+        },                {
+            "fqsen": "\\App\\Poker\\Poker\u003A\u003A\u0024pointsVertical",
+            "name": "pointsVertical",
+            "summary": "",
+            "url": "classes/App-Poker-Poker.html#property_pointsVertical"
+        },                {
+            "fqsen": "\\App\\Repository\\BibliotekRepository",
+            "name": "BibliotekRepository",
+            "summary": "",
+            "url": "classes/App-Repository-BibliotekRepository.html"
+        },                {
+            "fqsen": "\\App\\Repository\\BibliotekRepository\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/App-Repository-BibliotekRepository.html#method___construct"
+        },                {
+            "fqsen": "\\App\\Repository\\BibliotekRepository\u003A\u003Aadd\u0028\u0029",
+            "name": "add",
+            "summary": "",
+            "url": "classes/App-Repository-BibliotekRepository.html#method_add"
+        },                {
+            "fqsen": "\\App\\Repository\\BibliotekRepository\u003A\u003Aremove\u0028\u0029",
+            "name": "remove",
+            "summary": "",
+            "url": "classes/App-Repository-BibliotekRepository.html#method_remove"
+        },                {
+            "fqsen": "\\App\\Repository\\HighscoreRepository",
+            "name": "HighscoreRepository",
+            "summary": "",
+            "url": "classes/App-Repository-HighscoreRepository.html"
+        },                {
+            "fqsen": "\\App\\Repository\\HighscoreRepository\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/App-Repository-HighscoreRepository.html#method___construct"
+        },                {
+            "fqsen": "\\App\\Repository\\HighscoreRepository\u003A\u003Aadd\u0028\u0029",
+            "name": "add",
+            "summary": "",
+            "url": "classes/App-Repository-HighscoreRepository.html#method_add"
+        },                {
+            "fqsen": "\\App\\Repository\\HighscoreRepository\u003A\u003Aremove\u0028\u0029",
+            "name": "remove",
+            "summary": "",
+            "url": "classes/App-Repository-HighscoreRepository.html#method_remove"
         },                {
             "fqsen": "\\",
             "name": "\\",
@@ -261,6 +661,11 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/app-deck.html"
         },                {
+            "fqsen": "\\App\\Entity",
+            "name": "Entity",
+            "summary": "",
+            "url": "namespaces/app-entity.html"
+        },                {
             "fqsen": "\\App\\Game",
             "name": "Game",
             "summary": "",
@@ -275,5 +680,15 @@ Search.appendIndex(
             "name": "Player",
             "summary": "",
             "url": "namespaces/app-player.html"
+        },                {
+            "fqsen": "\\App\\Poker",
+            "name": "Poker",
+            "summary": "",
+            "url": "namespaces/app-poker.html"
+        },                {
+            "fqsen": "\\App\\Repository",
+            "name": "Repository",
+            "summary": "",
+            "url": "namespaces/app-repository.html"
         }            ]
 );

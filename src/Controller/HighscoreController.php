@@ -81,8 +81,11 @@ class HighscoreController extends AbstractController
     /**
     * @Route("/highscore/delete", name="highscore_delete")
     */
-    public function deleteAll(SessionInterface $session, ManagerRegistry $doctrine, HighscoreRepository $HighscoreRepository): Response
-    {
+    public function deleteAll(
+        SessionInterface $session,
+        ManagerRegistry $doctrine,
+        HighscoreRepository $HighscoreRepository
+    ): Response {
         $antalHighscores = count($HighscoreRepository->findAll());
 
         $firstId = intval($session->get("id")) - intval($antalHighscores) + 1;

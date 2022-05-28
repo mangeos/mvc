@@ -44,4 +44,13 @@ class GameTest extends TestCase
         $Game = new Game();
         $this->assertIsObject($Game->getDealer());
     }
+
+      public function test_takeOneCard()
+    {
+        $Game = new Game();
+        $Game->createDeckAndShuffle();
+        $Game->takeOneCard("Dealer");
+
+        $this->assertIsObject($Game->getDealer());
+    }
 }

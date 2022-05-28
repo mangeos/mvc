@@ -93,7 +93,11 @@ class ProjectController extends AbstractController
 
             $session->set('Poker', $game);
 
-            if (count($game->getHorisontalCards()[1]) + count($game->getHorisontalCards()[2]) + count($game->getHorisontalCards()[3]) + count($game->getHorisontalCards()[4]) + count($game->getHorisontalCards()[5]) == 25) {
+            if (
+                count($game->getHorisontalCards()[1]) + count($game->getHorisontalCards()[2]) +
+                count($game->getHorisontalCards()[3]) + count($game->getHorisontalCards()[4]) +
+                count($game->getHorisontalCards()[5]) == 25
+            ) {
                 # code...
                 return $this->render('project/savePoints.html.twig', [
                     'name'        => $game->getPlayer()->name,

@@ -109,12 +109,12 @@ class Poker
                 $suitHand = [];
                 $valueHand = [];
                 # hand row1
-               
-                    for ($e = 0; $e < count($cards[$i]); $e++) {
-                        # code...
-                        array_push($suitHand, $cards[$i][$e]->suit);
-                        array_push($valueHand, $cards[$i][$e]->pokerValue);
-                    }
+
+                for ($e = 0; $e < count($cards[$i]); $e++) {
+                    # code...
+                    array_push($suitHand, $cards[$i][$e]->suit);
+                    array_push($valueHand, $cards[$i][$e]->pokerValue);
+                }
                    // var_dump($valueHand);
                     # kollar fyra, triss och par
                     $pairsChecker = $this->pairsChecker($valueHand);
@@ -134,43 +134,43 @@ class Poker
                     #kollar 2 par
                     $twoPairs = $this->twoPairs($valueHand);
                     #9. 1 par                  -- yes pairsChecker
-                    if ($pairsChecker == "2") {
-                        $this->pointsHorisontal[$i - 1] = 2;
-                    }
+                if ($pairsChecker == "2") {
+                    $this->pointsHorisontal[$i - 1] = 2;
+                }
                     #8. 2 två par'             -- yes twoPairs($valueHand)
-                    if ($twoPairs == "två par") {
-                        $this->pointsHorisontal[$i - 1] = 5;
-                    }
+                if ($twoPairs == "två par") {
+                    $this->pointsHorisontal[$i - 1] = 5;
+                }
                    #7. triss                  -- yes pairsChecker
-                    if ($pairsChecker == "3") {
-                        $this->pointsHorisontal[$i - 1] = 10;
-                    }
+                if ($pairsChecker == "3") {
+                    $this->pointsHorisontal[$i - 1] = 10;
+                }
                    #6. straight stege         -- yes $this->royalFlushOrStraightFlushChecker($suitHand, $valueHand);
-                    if ($stege == "stege" || $stege == "högsta stege") {
-                        $this->pointsHorisontal[$i - 1] = 15;
-                    }
+                if ($stege == "stege" || $stege == "högsta stege") {
+                    $this->pointsHorisontal[$i - 1] = 15;
+                }
                    #5. färg flush             -- yes $this->royalFlushOrStraightFlushChecker($suitHand, $valueHand);
-                    if ($flush == "true") {
-                        $this->pointsHorisontal[$i - 1] = 20;
-                    }
+                if ($flush == "true") {
+                    $this->pointsHorisontal[$i - 1] = 20;
+                }
                    #4. Full house 3 & 2 par   -- yes fullHouse
-                    if ($fullHouse == "yes") {
-                        # code...
-                        $this->pointsHorisontal[$i - 1] = 25;
-                    }
+                if ($fullHouse == "yes") {
+                    # code...
+                    $this->pointsHorisontal[$i - 1] = 25;
+                }
 
                    #3. Four of a kind         -- yes pairsChecker
-                    if ($pairsChecker == "4") {
-                        $this->pointsHorisontal[$i - 1] = 50;
-                    }
+                if ($pairsChecker == "4") {
+                    $this->pointsHorisontal[$i - 1] = 50;
+                }
                    #2. straight flush         -- yes $this->royalFlushOrStraightFlushChecker($suitHand, $valueHand);
-                    if ($royalFlush == "STRAIGHT FLUSH") {
-                        $this->pointsHorisontal[$i - 1] = 75;
-                    }
+                if ($royalFlush == "STRAIGHT FLUSH") {
+                    $this->pointsHorisontal[$i - 1] = 75;
+                }
                     #1. Royal flush            -- yes $this->royalFlushOrStraightFlushChecker($suitHand, $valueHand);
-                    if ($royalFlush == "ROYAL FLUSH") {
-                        $this->pointsHorisontal[$i - 1] = 100;
-                    }
+                if ($royalFlush == "ROYAL FLUSH") {
+                    $this->pointsHorisontal[$i - 1] = 100;
+                }
             }
         }
         return $this->pointsHorisontal;

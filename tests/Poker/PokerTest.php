@@ -174,6 +174,4 @@ class PokerTest extends TestCase
             }
             $this->assertEquals($poker->calculateHorisentalt(), [10,10,10,10,10]);
     }
-    
-
 }
