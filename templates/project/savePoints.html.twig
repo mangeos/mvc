@@ -46,8 +46,24 @@
 		<div class="rightcolumn">
 			<div class="card">
 				<h2>Highscore</h2>
-				<div class="fakeimg" style="height:100px;">Image</div>
-				<p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+<div class="fakeimg" style="height:400px;">
+	<table>
+		<tr>
+			<th>Spelar Namn</th>
+			<th>Poäng</th>
+		</tr>
+		{% for item in json %}
+
+			<tr>
+				<td>{{item.playername}}</td>
+				<td>{{item.points}}</td>
+			</tr>
+		{% endfor %}
+
+	</table>
+
+</div>
+
 			</div>
 		</div>
 		</div>

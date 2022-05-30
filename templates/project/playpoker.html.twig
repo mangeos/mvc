@@ -155,63 +155,23 @@
 		<div class="rightcolumn">
 			<div class="card">
 				<h2>Highscore</h2>
-				<div class="fakeimgb" >
-<table>
-	<tr>
-		<th>Id</th>
-		<th>Spelar Namn</th>
-		<th>Poäng</th>
-	</tr>
-	<tr>
-		<td>1</td>
-		<td>Mange123</td>
-		<td>200</td>
-	</tr>
-	<tr>
-		<td>Centro comercial Moctezuma</td>
-		<td>Francisco Chang</td>
-		<td>Mexico</td>
-	</tr>
-	<tr>
-		<td>Ernst Handel</td>
-		<td>Roland Mendel</td>
-		<td>Austria</td>
-	</tr>
-	<tr>
-		<td>Island Trading</td>
-		<td>Helen Bennett</td>
-		<td>UK</td>
-	</tr>
-	<tr>
-		<td>Königlich Essen</td>
-		<td>Philip Cramer</td>
-		<td>Germany</td>
-	</tr>
-	<tr>
-		<td>Laughing Bacchus Winecellars</td>
-		<td>Yoshi Tannamuri</td>
-		<td>Canada</td>
-	</tr>
-	<tr>
-		<td>Magazzini Alimentari Riuniti</td>
-		<td>Giovanni Rovelli</td>
-		<td>Italy</td>
-	</tr>
-	<tr>
-		<td>North/South</td>
-		<td>Simon Crowther</td>
-		<td>UK</td>
-	</tr>
-	<tr>
-		<td>Paris spécialités</td>
-		<td>Marie Bertrand</td>
-		<td>France</td>
-	</tr>
-</table>
+<div class="fakeimg" style="height:400px;">
+	<table>
+		<tr>
+			<th>Spelar Namn</th>
+			<th>Poäng</th>
+		</tr>
+		{% for item in json %}
 
+			<tr>
+				<td>{{item.playername}}</td>
+				<td>{{item.points}}</td>
+			</tr>
+		{% endfor %}
 
-				</div>
-				<p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+	</table>
+
+</div>
 			</div>
 			
 		</div>

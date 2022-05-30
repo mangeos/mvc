@@ -28,7 +28,11 @@
 				<h2>Spela Poker Solitaire</h2>
 				<div class="fakeimg" style="height:600px;">
 					<h3>Regler</h3>
-					<p>Spelet börjar med att lägga ett kort på ett utrymme i ett 5x5 rutnät. Korten placeras ett i taget och när ett kort väl har placerats på rutnätet kan det inte längre flyttas. När alla 25 kort har delats ut, poängsätts på händerna på 5 kort som är bildade horisontellt i rader eller vertikalt i kolumner.[3] Antalet poäng beror på hierarkin av pokerhänder. Det finns två poängsystem: det engelska och det amerikanska poängsystemet. Det engelska systemet återspeglar svårigheten att få händerna i spelet; det amerikanska systemet återspeglar svårigheten att få händerna i faktisk poker. De två systemen betygsätter händernas poäng enligt följande:</p>
+					<p>Spelet börjar med att lägga ett kort på ett utrymme i ett 5x5 rutnät. 
+					Fem kort delas ut direkt därefter placeras ett i taget och när ett kort väl har placerats på rutnätet kan det inte längre flyttas. 
+					När alla 25 kort har delats ut, poängsätts på händerna på 5 kort som är bildade horisontellt i rader eller vertikalt i kolumner.
+					Antalet poäng beror på hierarkin av pokerhänder.
+					</p>
 						<table>
 							<tr>
 								<th>Poker Hand</th>
@@ -87,8 +91,24 @@
 		<div class="rightcolumn">
 			<div class="card">
 				<h2>Highscore</h2>
-				<div class="fakeimg" style="height:100px;">Image</div>
-				<p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+<div class="fakeimg" style="height:400px;">
+	<table>
+		<tr>
+			<th>Spelar Namn</th>
+			<th>Poäng</th>
+		</tr>
+		{% for item in json %}
+
+			<tr>
+				<td>{{item.playername}}</td>
+				<td>{{item.points}}</td>
+			</tr>
+		{% endfor %}
+
+	</table>
+
+</div>
+
 			</div>
 			
 		</div>

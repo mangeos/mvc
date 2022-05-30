@@ -13,13 +13,17 @@ class Poker
 
     public $pointsHorisontal;
     public $pointsVertical;
-    //private $pointsHorisental;
      /**
      * Constructor.
      *
      * @param object $deck
      * @param object $dealer
      * @param object $player
+     * @param array $verticalCards
+     * @param array $horisentalCards
+     * @param array $pointsVertical
+     * @param array $pointsVertical
+     * @param int $totalPoints
      */
     public function __construct($PlayerName)
     {
