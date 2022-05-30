@@ -34,6 +34,7 @@ class ProjectController extends AbstractController
     {
         $url = "myfile.json";
         $json = file_get_contents($url);
+        $json = json_decode($json, true);
         $title = "Presentation";
         return $this->render('project/play.html.twig', [
             'title' => $title,
@@ -48,6 +49,7 @@ class ProjectController extends AbstractController
     {
         $url = "myfile.json";
         $json = file_get_contents($url);
+        $json = json_decode($json, true);
         $title = "About";
         return $this->render('project/about.html.twig', [
             'title' => $title,
@@ -74,6 +76,7 @@ class ProjectController extends AbstractController
     {
         $url = "myfile.json";
         $json = file_get_contents($url);
+        $json = json_decode($json, true);
         $title = "Presentation";
 
 
